@@ -21,6 +21,7 @@ load(
     "POM_VERSION",
 )
 load("//tools:maven.bzl", "gen_maven_artifact")
+load("@io_bazel_rules_kotlin//kotlin:kotlin.bzl", "kt_codegen_plugin")
 
 package(default_visibility = ["//:src"])
 
@@ -53,6 +54,7 @@ java_library(
         "//third_party/java/google_java_format",
         "//third_party/java/guava/collect",
         "//third_party/java/incap",
+        "//third_party/kotlin/kotlin_symbol_processing/build_rules:archipelago",
         "@maven//:com_google_devtools_ksp_symbol_processing_api",
     ],
 )
@@ -107,6 +109,13 @@ gen_maven_artifact(
     # externally. Specifically, ComponentProcessor.forTesting() is required for testing SPI plugins.
     javadoc_srcs = ["ComponentProcessor.java"],
     # The shaded deps are inherited from dagger spi. For the shaded rules see util/deploy-dagger.sh
+)
+
+kt_codegen_plugin(
+    name = "kt-component-codegen",
+    plugin_output_constraints = ["java"],
+    processor_classes = ["dagger.internal.codegen.ArchipelagoComponentProcessor"],
+    deps = [":processor"],
 )
 
 java_plugin(
