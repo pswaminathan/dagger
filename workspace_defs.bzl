@@ -18,6 +18,7 @@ load("@rules_jvm_external//:defs.bzl", "maven_install")
 load("//:build_defs.bzl", "POM_VERSION")
 
 def dagger_workspace():
+    google_common_workspace_rules()
     maven_install(
         artifacts = DAGGER_MAVEN_DEPS,
         name = "dagger_maven",
