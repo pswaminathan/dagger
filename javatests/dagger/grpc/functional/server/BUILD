@@ -2,7 +2,7 @@
 
 load("@rules_java//java:defs.bzl", "java_proto_library")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 # TODO(dpb): enable tests once java_grpc_library is ready in bazel:
 # https://github.com/grpc/grpc-java/issues/2756

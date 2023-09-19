@@ -15,17 +15,17 @@
 # Description:
 #   Functional tests for Dagger that depend on Guava
 
-load("//:build_defs.bzl", "DOCLINT_HTML_AND_SYNTAX")
-load("//:test_defs.bzl", "GenJavaTests")
+load("@dagger//:build_defs.bzl", "DOCLINT_HTML_AND_SYNTAX")
+load("@dagger//:test_defs.bzl", "GenJavaTests")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_library(
     name = "optional_binding_components",
     srcs = ["OptionalBindingComponents.java"],
     javacopts = DOCLINT_HTML_AND_SYNTAX,
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//third_party/java/auto:value",
         "//third_party/java/jsr305_annotations",
     ],
@@ -45,7 +45,7 @@ GenJavaTests(
         "//third_party/java/truth",
     ],
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//third_party/java/auto:value",
         "//third_party/java/jsr305_annotations",
     ],
@@ -65,7 +65,7 @@ GenJavaTests(
         "//third_party/java/truth",
     ],
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//third_party/java/auto:value",
         "//third_party/java/jsr305_annotations",
     ],

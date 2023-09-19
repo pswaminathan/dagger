@@ -15,13 +15,13 @@
 # Description:
 #   Hilt android modules for standard components.
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 android_library(
     name = "modules",
     srcs = glob(["*.java"]),
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//java/dagger/hilt:install_in",
         "//java/dagger/hilt/android/components",
         "//java/dagger/hilt/android/internal",

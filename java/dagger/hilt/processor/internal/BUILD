@@ -17,7 +17,7 @@
 
 load("@io_bazel_rules_kotlin//kotlin:kotlin.bzl", "kt_jvm_library")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_library(
     name = "base_processor",
@@ -170,7 +170,7 @@ kt_jvm_library(
     srcs = ["DaggerModels.kt"],
     deps = [
         ":processors",
-        "//:spi",
+        "@dagger//:spi",
         "//third_party/java/auto:common",
         "//third_party/java/javapoet",
         "@dagger_maven//:com_google_devtools_ksp_symbol_processing_api",

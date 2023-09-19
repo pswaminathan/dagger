@@ -14,7 +14,7 @@
 
 # BUILD rules for https://github.com/google/truth
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 alias(
     name = "diffutils",

@@ -15,10 +15,10 @@
 # Description:
 #   Functional tests for Dagger testing various name conflicts.
 
-load("//:build_defs.bzl", "DOCLINT_HTML_AND_SYNTAX")
-load("//:test_defs.bzl", "GenJavaTests")
+load("@dagger//:build_defs.bzl", "DOCLINT_HTML_AND_SYNTAX")
+load("@dagger//:test_defs.bzl", "GenJavaTests")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 # TODO(b/203233586): Replace with GenJavaTest
 GenJavaTests(
@@ -26,7 +26,7 @@ GenJavaTests(
     srcs = ["ComponentFactoryNameConflictsTest.java"],
     javacopts = DOCLINT_HTML_AND_SYNTAX,
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//third_party/java/junit",
         "//third_party/java/truth",
     ],

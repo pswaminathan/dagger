@@ -17,7 +17,7 @@
 
 load("@rules_java//java:defs.bzl", "java_plugin")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_plugin(
     name = "binding-graph-visualizer",

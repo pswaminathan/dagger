@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+workspace(name = "dagger")
+
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 #############################
@@ -125,16 +127,16 @@ load("@io_bazel_rules_kotlin//kotlin:core.bzl", "kt_register_toolchains")
 kt_register_toolchains()
 
 #############################
-# Load Maven dependencies
+# Load dependencies
 #############################
-load(":repositories.bzl", "dagger_repositories")
+load("@dagger//:repositories.bzl", "dagger_repositories")
 
 dagger_repositories()
 
-load(":workspace_defs.bzl", "dagger_workspace")
+load("@dagger//:workspace_defs.bzl", "dagger_workspace")
 
 dagger_workspace()
 
-load(":workspace_defs_2.bzl", "dagger_workspace_2")
+load("@dagger//:workspace_defs_2.bzl", "dagger_workspace_2")
 
 dagger_workspace_2()

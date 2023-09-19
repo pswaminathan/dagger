@@ -15,10 +15,10 @@
 # Description:
 #   Tests for Dagger's Android integrations
 
-load("//:build_defs.bzl", "DOCLINT_HTML_AND_SYNTAX")
-load("//:test_defs.bzl", "GenJavaTests")
+load("@dagger//:build_defs.bzl", "DOCLINT_HTML_AND_SYNTAX")
+load("@dagger//:test_defs.bzl", "GenJavaTests")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 GenJavaTests(
     name = "android_processor_tests",
@@ -26,7 +26,7 @@ GenJavaTests(
     functional = False,
     javacopts = DOCLINT_HTML_AND_SYNTAX,
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//java/dagger/android",
         "//java/dagger/android/processor",
         "//java/dagger/internal/codegen:processor",

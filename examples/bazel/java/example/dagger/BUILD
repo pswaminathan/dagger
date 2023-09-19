@@ -17,7 +17,7 @@ java_binary(
     srcs = glob(["*.java"]),
     main_class = "dagger.coffee.CoffeeApp",
     deps = [
-        "//:dagger",
+        "@dagger//:dagger",
         "//java/example/common",
     ],
 )

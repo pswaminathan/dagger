@@ -14,7 +14,7 @@
 
 # BUILD rules for http://asm.ow2.org/
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 alias(
     name = "asm",

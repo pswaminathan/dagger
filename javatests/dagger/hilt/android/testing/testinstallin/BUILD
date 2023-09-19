@@ -14,7 +14,7 @@
 # Description:
 #   Tests for internal code for implementing Hilt processors.
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 android_local_test(
     name = "TestInstallInFooTest",
@@ -26,8 +26,8 @@ android_local_test(
     },
     deps = [
         ":TestInstallInModules",
-        "//:android_local_test_exports",
-        "//:dagger_with_compiler",
+        "@dagger//:android_local_test_exports",
+        "@dagger//:dagger_with_compiler",
         "//java/dagger/hilt/android:android_entry_point",
         "//java/dagger/hilt/android/testing:hilt_android_test",
         "//third_party/java/truth",
@@ -52,8 +52,8 @@ android_local_test(
     },
     deps = [
         ":TestInstallInModules",
-        "//:android_local_test_exports",
-        "//:dagger_with_compiler",
+        "@dagger//:android_local_test_exports",
+        "@dagger//:dagger_with_compiler",
         "//java/dagger/hilt/android/testing:hilt_android_test",
         "//java/dagger/hilt/android/testing:uninstall_modules",
         "//java/dagger/hilt/testing:test_install_in",
@@ -75,7 +75,7 @@ android_local_test(
     deps = [
         ":TestInstallInApp",
         ":TestInstallInModules",
-        "//:android_local_test_exports",
+        "@dagger//:android_local_test_exports",
         "//third_party/java/truth",
         "@dagger_maven//:androidx_test_core",
         "@dagger_maven//:androidx_test_ext_junit",
@@ -90,8 +90,8 @@ android_library(
     srcs = ["TestInstallInApp.java"],
     deps = [
         ":TestInstallInModules",
-        "//:android_local_test_exports",
-        "//:dagger_with_compiler",
+        "@dagger//:android_local_test_exports",
+        "@dagger//:dagger_with_compiler",
         "//java/dagger/hilt/android:hilt_android_app",
     ],
 )
@@ -101,7 +101,7 @@ android_library(
     testonly = True,
     srcs = ["TestInstallInModules.java"],
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//java/dagger/hilt:install_in",
         "//java/dagger/hilt/android/components",
         "//java/dagger/hilt/testing:test_install_in",

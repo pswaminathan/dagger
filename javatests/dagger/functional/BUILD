@@ -15,4 +15,4 @@
 # Description:
 #   Functional tests for Dagger
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])

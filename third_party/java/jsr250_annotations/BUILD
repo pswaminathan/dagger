@@ -14,7 +14,7 @@
 
 # BUILD rules for https://en.wikipedia.org/wiki/JSR_250
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 alias(
     name = "jsr250_annotations",

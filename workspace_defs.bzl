@@ -14,8 +14,9 @@
 
 """A macro to configure Dagger deps within a workspace"""
 
+load("@dagger//:build_defs.bzl", "POM_VERSION")
+load("@dagger//third_party/google_bazel_common:workspace_defs.bzl", "google_common_workspace_rules")
 load("@rules_jvm_external//:defs.bzl", "maven_install")
-load("//:build_defs.bzl", "POM_VERSION")
 
 def dagger_workspace():
     google_common_workspace_rules()
@@ -292,9 +293,9 @@ def hilt_android_rules(repo_name = "@dagger_maven"):
         ],
         visibility = ["//visibility:public"],
         exports = [
-            "//:dagger_with_compiler",
-            "//java/dagger/hilt:artifact-core-lib",
-            "//java/dagger/hilt/android:artifact-lib",
+            "@dagger//:dagger_with_compiler",
+            "@dagger//java/dagger/hilt:artifact-core-lib",
+            "@dagger//java/dagger/hilt/android:artifact-lib",
             "%s//:androidx_annotation_annotation" % repo_name,  # For @CallSuper
             "%s//:javax_annotation_javax_annotation_api" % repo_name,  # For @Generated
             "%s//:javax_inject_javax_inject" % repo_name,  # For @Inject
@@ -308,7 +309,7 @@ def hilt_android_rules(repo_name = "@dagger_maven"):
         generates_api = 1,
         processor_class = "dagger.internal.codegen.ComponentProcessor",
         deps = [
-            "//:dagger_with_compiler",
+            "@dagger//:dagger_with_compiler",
         ],
     )
 
@@ -316,70 +317,70 @@ def hilt_android_rules(repo_name = "@dagger_maven"):
         name = "hilt_android_entry_point_processor",
         generates_api = 1,
         processor_class = "dagger.hilt.android.processor.internal.androidentrypoint.AndroidEntryPointProcessor",
-        deps = ["//java/dagger/hilt/android/processor:artifact-lib"],
+        deps = ["@dagger//java/dagger/hilt/android/processor:artifact-lib"],
     )
 
     native.java_plugin(
         name = "hilt_aggregated_deps_processor",
         generates_api = 1,
         processor_class = "dagger.hilt.processor.internal.aggregateddeps.AggregatedDepsProcessor",
-        deps = ["//java/dagger/hilt/android/processor:artifact-lib"],
+        deps = ["@dagger//java/dagger/hilt/android/processor:artifact-lib"],
     )
 
     native.java_plugin(
         name = "hilt_alias_of_processor",
         generates_api = 1,
         processor_class = "dagger.hilt.processor.internal.aliasof.AliasOfProcessor",
-        deps = ["//java/dagger/hilt/android/processor:artifact-lib"],
+        deps = ["@dagger//java/dagger/hilt/android/processor:artifact-lib"],
     )
 
     native.java_plugin(
         name = "hilt_define_component_processor",
         generates_api = 1,
         processor_class = "dagger.hilt.processor.internal.definecomponent.DefineComponentProcessor",
-        deps = ["//java/dagger/hilt/android/processor:artifact-lib"],
+        deps = ["@dagger//java/dagger/hilt/android/processor:artifact-lib"],
     )
 
     native.java_plugin(
         name = "hilt_early_entry_points_processor",
         generates_api = 1,
         processor_class = "dagger.hilt.processor.internal.earlyentrypoint.EarlyEntryPointProcessor",
-        deps = ["//java/dagger/hilt/android/processor:artifact-lib"],
+        deps = ["@dagger//java/dagger/hilt/android/processor:artifact-lib"],
     )
 
     native.java_plugin(
         name = "hilt_generates_root_input_processor",
         generates_api = 1,
         processor_class = "dagger.hilt.processor.internal.generatesrootinput.GeneratesRootInputProcessor",
-        deps = ["//java/dagger/hilt/android/processor:artifact-lib"],
+        deps = ["@dagger//java/dagger/hilt/android/processor:artifact-lib"],
     )
 
     native.java_plugin(
         name = "hilt_originating_element_processor",
         generates_api = 1,
         processor_class = "dagger.hilt.processor.internal.originatingelement.OriginatingElementProcessor",
-        deps = ["//java/dagger/hilt/android/processor:artifact-lib"],
+        deps = ["@dagger//java/dagger/hilt/android/processor:artifact-lib"],
     )
 
     native.java_plugin(
         name = "hilt_root_processor",
         generates_api = 1,
         processor_class = "dagger.hilt.processor.internal.root.RootProcessor",
-        deps = ["//java/dagger/hilt/android/processor:artifact-lib"],
+        deps = ["@dagger//java/dagger/hilt/android/processor:artifact-lib"],
     )
 
     native.java_plugin(
         name = "hilt_component_tree_deps_processor",
         generates_api = 1,
         processor_class = "dagger.hilt.processor.internal.root.ComponentTreeDepsProcessor",
-        deps = ["//java/dagger/hilt/android/processor:artifact-lib"],
+        deps = ["@dagger//java/dagger/hilt/android/processor:artifact-lib"],
     )
 
     native.java_plugin(
         name = "hilt_view_model_processor",
         generates_api = 1,
         processor_class = "dagger.hilt.android.processor.internal.viewmodel.ViewModelProcessor",
-        deps = ["//java/dagger/hilt/android/processor:artifact-lib"],
+        deps = ["@dagger//java/dagger/hilt/android/processor:artifact-lib"],
     )
 
     # https://github.com/bazelbuild/buildtools/blob/master/WARNINGS.md#native-android
@@ -395,7 +396,7 @@ def hilt_android_rules(repo_name = "@dagger_maven"):
         visibility = ["//visibility:public"],
         exports = [
             ":hilt-android",
-            "//java/dagger/hilt/android/testing:artifact-lib",
+            "@dagger//java/dagger/hilt/android/testing:artifact-lib",
             "%s//:androidx_test_core" % repo_name,  # For ApplicationProvider
         ],
     )
@@ -404,19 +405,19 @@ def hilt_android_rules(repo_name = "@dagger_maven"):
         name = "hilt_bind_value_processor",
         generates_api = 1,
         processor_class = "dagger.hilt.android.processor.internal.bindvalue.BindValueProcessor",
-        deps = ["//java/dagger/hilt/android/processor:artifact-lib"],
+        deps = ["@dagger//java/dagger/hilt/android/processor:artifact-lib"],
     )
 
     native.java_plugin(
         name = "hilt_custom_test_application_processor",
         generates_api = 1,
         processor_class = "dagger.hilt.android.processor.internal.customtestapplication.CustomTestApplicationProcessor",
-        deps = ["//java/dagger/hilt/android/processor:artifact-lib"],
+        deps = ["@dagger//java/dagger/hilt/android/processor:artifact-lib"],
     )
 
     native.java_plugin(
         name = "hilt_uninstall_modules_processor",
         generates_api = 1,
         processor_class = "dagger.hilt.processor.internal.uninstallmodules.UninstallModulesProcessor",
-        deps = ["//java/dagger/hilt/android/processor:artifact-lib"],
+        deps = ["@dagger//java/dagger/hilt/android/processor:artifact-lib"],
     )

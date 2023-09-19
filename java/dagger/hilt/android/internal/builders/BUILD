@@ -15,13 +15,13 @@
 # Description:
 #   Hilt Android component builders
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 android_library(
     name = "builders",
     srcs = glob(["*.java"]),
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//java/dagger/hilt:define_component",
         "//java/dagger/hilt/android:view_model_lifecycle",
         "//java/dagger/hilt/android/components",

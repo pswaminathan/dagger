@@ -16,14 +16,14 @@
 #   Tests for dagger.producers
 
 load(
-    "//:build_defs.bzl",
+    "@dagger//:build_defs.bzl",
     "DOCLINT_HTML_AND_SYNTAX",
     "DOCLINT_REFERENCES",
     "JAVA_RELEASE_MIN",
 )
-load("//:test_defs.bzl", "GenJavaTests")
+load("@dagger//:test_defs.bzl", "GenJavaTests")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 GenJavaTests(
     name = "producers_tests",

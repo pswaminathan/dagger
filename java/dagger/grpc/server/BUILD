@@ -2,7 +2,7 @@
 
 load("@rules_java//java:defs.bzl", "java_library")
 load(
-    "//:build_defs.bzl",
+    "@dagger//:build_defs.bzl",
     "DOCLINT_HTML_AND_SYNTAX",
     "DOCLINT_REFERENCES",
     "POM_VERSION",
@@ -10,7 +10,7 @@ load(
 load("//tools:maven.bzl", "pom_file")
 load("@google_bazel_common//tools/javadoc:javadoc.bzl", "javadoc_library")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 ANNOTATIONS_SRCS = [
     "CallScoped.java",
@@ -40,7 +40,7 @@ java_library(
     tags = ["maven_coordinates=com.google.dagger:dagger-grpc-server:" + POM_VERSION],
     exports = [":annotations"],
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//third_party/java/auto:value",
         "//third_party/java/grpc:context",
         "//third_party/java/grpc:core",

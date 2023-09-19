@@ -15,7 +15,7 @@
 # Description:
 #   A processor for @dagger.hilt.android.EarlyEntryPoint.
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_plugin(
     name = "processor",

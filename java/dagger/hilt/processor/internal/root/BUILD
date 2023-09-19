@@ -15,7 +15,7 @@
 # Description:
 #   Annotation processor for Hilt.
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_plugin(
     name = "component_tree_deps_plugin",

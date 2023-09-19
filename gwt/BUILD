@@ -17,9 +17,9 @@
 
 load("@rules_java//java:defs.bzl", "java_library")
 load("//tools:maven.bzl", "pom_file")
-load("//:build_defs.bzl", "POM_VERSION")
+load("@dagger//:build_defs.bzl", "POM_VERSION")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_library(
     name = "gwt",

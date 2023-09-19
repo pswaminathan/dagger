@@ -15,7 +15,7 @@
 # Description:
 #   Internal Hilt libraries
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_library(
     name = "test_singleton_component",

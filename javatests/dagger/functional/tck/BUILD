@@ -16,13 +16,13 @@
 #  TCK tests for Dagger
 
 load(
-    "//:build_defs.bzl",
+    "@dagger//:build_defs.bzl",
     "DOCLINT_HTML_AND_SYNTAX",
     "DOCLINT_REFERENCES",
 )
-load("//:test_defs.bzl", "GenJavaTests")
+load("@dagger//:test_defs.bzl", "GenJavaTests")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 GenJavaTests(
     name = "tck_tests",
@@ -33,7 +33,7 @@ GenJavaTests(
         "-Adagger.ignorePrivateAndStaticInjectionForComponent=enabled",
     ] + DOCLINT_HTML_AND_SYNTAX + DOCLINT_REFERENCES,
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//third_party/java/jsr330_inject",
         "//third_party/java/jsr330_inject:tck",
         "//third_party/java/junit",

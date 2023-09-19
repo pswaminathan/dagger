@@ -15,4 +15,4 @@
 # Description:
 #   This package contains gradle tests of the LOCAL-SNAPSHOT artifacts.
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])

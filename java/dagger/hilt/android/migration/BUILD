@@ -15,7 +15,7 @@
 # Description:
 #   Helpers for migrating to Hilt.
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 android_library(
     name = "optional_inject",

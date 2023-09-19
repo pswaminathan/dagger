@@ -15,7 +15,7 @@
 # Description:
 #   Tests for internal code for implementing Hilt processors.
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_test(
     name = "ProcessorsTest",

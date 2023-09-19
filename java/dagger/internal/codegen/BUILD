@@ -17,12 +17,12 @@
 
 load("@rules_java//java:defs.bzl", "java_library", "java_plugin")
 load(
-    "//:build_defs.bzl",
+    "@dagger//:build_defs.bzl",
     "POM_VERSION",
 )
 load("//tools:maven.bzl", "gen_maven_artifact")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_library(
     name = "processor",

@@ -14,7 +14,7 @@
 
 # BUILD rules for javax.inject (https://www.jcp.org/en/jsr/detail?id=330)
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 alias(
     name = "jsr330_inject",

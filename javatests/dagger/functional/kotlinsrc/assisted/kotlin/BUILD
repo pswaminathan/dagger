@@ -14,10 +14,10 @@
 # Description:
 #   Tests for internal code for implementing Hilt processors.
 
-load("//:build_defs.bzl", "DOCLINT_HTML_AND_SYNTAX")
-load("//:test_defs.bzl", "GenKtLibrary", "GenKtTests")
+load("@dagger//:build_defs.bzl", "DOCLINT_HTML_AND_SYNTAX")
+load("@dagger//:test_defs.bzl", "GenKtLibrary", "GenKtTests")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 GenKtTests(
     name = "KotlinAssistedInjectionTest",
@@ -31,7 +31,7 @@ GenKtTests(
         "//third_party/java/truth",
     ],
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//third_party/java/auto:factory",
     ],
 )
@@ -41,7 +41,7 @@ GenKtLibrary(
     srcs = ["KotlinAssistedInjectionClasses.kt"],
     javacopts = DOCLINT_HTML_AND_SYNTAX,
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//third_party/java/auto:factory",
     ],
 )

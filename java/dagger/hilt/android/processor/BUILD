@@ -15,15 +15,15 @@
 # Description:
 #   Hilt android processors.
 
-load("//:build_defs.bzl", "POM_VERSION")
+load("@dagger//:build_defs.bzl", "POM_VERSION")
 load("//tools:maven.bzl", "gen_maven_artifact")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_library(
     name = "artifact-lib",
     tags = ["maven_coordinates=com.google.dagger:hilt-android-compiler:" + POM_VERSION],
-    visibility = ["//visibility:private"],
+    visibility = ["//visibility:public"],
     exports = [
         "//java/dagger/hilt/processor:artifact-lib-shared",
     ],

@@ -14,10 +14,10 @@
 # Description:
 #   Testing libraries for Hilt Android.
 
-load("//:build_defs.bzl", "POM_VERSION")
+load("@dagger//:build_defs.bzl", "POM_VERSION")
 load("//tools:maven.bzl", "gen_maven_artifact")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 android_library(
     name = "custom_test_application",
@@ -52,7 +52,7 @@ android_library(
         ":hilt_test_application",
         ":on_component_ready_runner",
         ":package_info",
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//java/dagger/hilt:install_in",
         "//java/dagger/hilt/android/components",
         "//java/dagger/hilt/android/internal",
@@ -120,7 +120,7 @@ android_library(
     srcs = ["OnComponentReadyRunner.java"],
     deps = [
         ":package_info",
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//java/dagger/hilt:entry_point",
         "//java/dagger/hilt/android/internal",
         "//java/dagger/hilt/android/internal/testing:test_application_component_manager_holder",

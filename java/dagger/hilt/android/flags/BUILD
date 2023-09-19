@@ -17,7 +17,7 @@
 #   meant to be temporary and so defaults may change with releases and then these flags
 #   may eventually be removed, just like compiler options with similar purposes.
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 android_library(
     name = "fragment_get_context_fix",
@@ -25,7 +25,7 @@ android_library(
         "FragmentGetContextFix.java",
     ],
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//java/dagger/hilt:entry_point",
         "//java/dagger/hilt:install_in",
         "//java/dagger/hilt/android:entry_point_accessors",

@@ -15,7 +15,7 @@
 # Description:
 #   A processor that aggregates metadata about Hilt @InstallIn annotations
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 # TODO(bcorso): Remove all AggregatedDeps usage from the processor class path.
 java_library(

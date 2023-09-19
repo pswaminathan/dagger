@@ -17,14 +17,14 @@
 
 load("@rules_java//java:defs.bzl", "java_library")
 load(
-    "//:build_defs.bzl",
+    "@dagger//:build_defs.bzl",
     "DOCLINT_HTML_AND_SYNTAX",
     "DOCLINT_REFERENCES",
     "POM_VERSION",
 )
 load("//tools:maven.bzl", "gen_maven_artifact")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 filegroup(
     name = "spi-srcs",

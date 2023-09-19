@@ -17,13 +17,13 @@
 
 load("@rules_java//java:defs.bzl", "java_library")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_library(
     name = "kotlin",
     srcs = glob(["*.java"]),
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//java/dagger/hilt/processor/internal:classnames",
         "//java/dagger/internal/codegen/extension",
         "//java/dagger/internal/codegen/xprocessing",

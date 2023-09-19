@@ -15,9 +15,9 @@
 # Description:
 #   Functional test code for Dagger-Android
 
-load("//:test_defs.bzl", "GenRobolectricTests")
+load("@dagger//:test_defs.bzl", "GenRobolectricTests")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 android_library(
     name = "functional",
@@ -36,9 +36,9 @@ android_library(
         "@dagger_maven//:androidx_lifecycle_lifecycle_viewmodel_savedstate",
         "@dagger_maven//:androidx_appcompat_appcompat",
         "@dagger_maven//:androidx_annotation_annotation",
-        "//:dagger_with_compiler",
-        "//:android",
-        "//:android-support",
+        "@dagger//:dagger_with_compiler",
+        "@dagger//:android",
+        "@dagger//:android-support",
         # TODO(ronshapiro): figure out why strict deps is failing without this
         "//third_party/java/jsr250_annotations",
     ],
@@ -52,9 +52,9 @@ GenRobolectricTests(
     },
     deps = [
         ":functional",
-        "//:android",
-        "//:android-support",
-        "//:dagger_with_compiler",
+        "@dagger//:android",
+        "@dagger//:android-support",
+        "@dagger//:dagger_with_compiler",
         "//third_party/java/truth",
         "@dagger_maven//:androidx_activity_activity",
         "@dagger_maven//:androidx_fragment_fragment",

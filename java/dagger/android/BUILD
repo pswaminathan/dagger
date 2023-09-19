@@ -16,7 +16,7 @@
 #   Public Dagger API for Android
 
 load(
-    "//:build_defs.bzl",
+    "@dagger//:build_defs.bzl",
     "DOCLINT_HTML_AND_SYNTAX",
     "DOCLINT_REFERENCES",
     "JAVA_RELEASE_MIN",
@@ -26,7 +26,7 @@ load("//tools:dejetify.bzl", "dejetified_library")
 load("//tools:maven.bzl", "pom_file")
 load("@google_bazel_common//tools/javadoc:javadoc.bzl", "javadoc_library")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 # Work around b/70476182 which prevents Kythe from connecting :producers to the .java files it
 # contains.
@@ -53,7 +53,7 @@ android_library(
         "//java/dagger/lint:lint-android-artifact-lib",
     ],
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//third_party/java/auto:value",
         "//third_party/java/error_prone:annotations",
         "@dagger_maven//:androidx_annotation_annotation",
@@ -78,7 +78,7 @@ android_library(
     name = "legacy-deps",
     tags = ["maven_coordinates=com.google.dagger:dagger-android-legacy:" + POM_VERSION],
     exports = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//third_party/java/auto:value",
         "//third_party/java/error_prone:annotations",
         "@dagger_maven//:com_android_support_support_annotations",

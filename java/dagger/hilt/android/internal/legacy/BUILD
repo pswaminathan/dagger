@@ -15,7 +15,7 @@
 # Description:
 #   Internal Hilt libraries for legacy code.
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_library(
     name = "aggregated_element_proxy",

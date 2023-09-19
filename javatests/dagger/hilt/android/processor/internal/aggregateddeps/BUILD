@@ -16,14 +16,14 @@
 
 load("//java/dagger/testing/compile:macros.bzl", "compiler_test")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 compiler_test(
     name = "TestInstallInTest",
     srcs = ["TestInstallInTest.java"],
     compiler_deps = [
         ":InstallInModule",
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//java/dagger/hilt:install_in",
         "//java/dagger/hilt:entry_point",
         "//java/dagger/hilt/components",
@@ -62,7 +62,7 @@ java_library(
     name = "InstallInModule",
     srcs = ["InstallInModule.java"],
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//java/dagger/hilt:install_in",
         "//java/dagger/hilt/components",
     ],

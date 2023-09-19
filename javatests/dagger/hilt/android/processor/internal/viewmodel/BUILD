@@ -18,7 +18,7 @@
 load("@io_bazel_rules_kotlin//kotlin:kotlin.bzl", "kt_jvm_library")
 load("//java/dagger/testing/compile:macros.bzl", "kt_compiler_test")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 kt_compiler_test(
     name = "ViewModelProcessorTest",
@@ -55,7 +55,7 @@ kt_compiler_test(
     resources = glob(["goldens/*"]),
     deps = [
         ":test_utils",
-        "//:compiler_internals",
+        "@dagger//:compiler_internals",
         "//java/dagger/hilt/android/processor/internal/viewmodel:processor_lib",
         "//java/dagger/hilt/android/processor/internal/viewmodel:validation_plugin_lib",
         "//java/dagger/hilt/android/testing/compile",

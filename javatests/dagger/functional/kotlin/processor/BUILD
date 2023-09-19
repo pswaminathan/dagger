@@ -13,7 +13,7 @@
 # limitations under the License.
 load("@io_bazel_rules_kotlin//kotlin:kotlin.bzl", "kt_jvm_library")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_plugin(
     name = "plugin",

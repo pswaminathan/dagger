@@ -15,7 +15,7 @@
 # Description:
 #   Internal Hilt android testing libraries
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_library(
     name = "test_injector",

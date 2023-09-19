@@ -15,10 +15,10 @@
 # Description:
 #   Tests for Dagger's Android and Support library integrations
 
-load("//:build_defs.bzl", "DOCLINT_HTML_AND_SYNTAX")
-load("//:test_defs.bzl", "GenRobolectricTests")
+load("@dagger//:build_defs.bzl", "DOCLINT_HTML_AND_SYNTAX")
+load("@dagger//:test_defs.bzl", "GenRobolectricTests")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 GenRobolectricTests(
     name = "android-support-tests",
@@ -29,7 +29,7 @@ GenRobolectricTests(
         "minSdkVersion": "14",
     },
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//java/dagger/android",
         "//java/dagger/android/support",
         "//third_party/java/guava/base",

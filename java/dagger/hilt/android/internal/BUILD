@@ -15,7 +15,7 @@
 # Description:
 #   Internal Hilt Android utitlies
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 android_library(
     name = "internal",

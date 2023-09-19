@@ -17,7 +17,7 @@
 
 load("//java/dagger/testing/compile:macros.bzl", "compiler_test")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 compiler_test(
     name = "DisableInstallInCheckProcessorErrorsTest",
@@ -25,7 +25,7 @@ compiler_test(
     srcs = ["DisableInstallInCheckProcessorErrorsTest.java"],
     compiler_deps = [
         "//java/dagger/hilt/migration:disable_install_in_check",
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//third_party/java/jsr250_annotations",
         "//java/dagger/hilt:entry_point",
         "//java/dagger/hilt:install_in",

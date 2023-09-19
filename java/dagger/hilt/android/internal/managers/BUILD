@@ -15,7 +15,7 @@
 # Description:
 #   Internal Hilt Android managers
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 android_library(
     name = "component_supplier",
@@ -35,7 +35,7 @@ android_library(
     ],
     deps = [
         ":component_supplier",
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//java/dagger/hilt:entry_point",
         "//java/dagger/hilt:install_in",
         "//java/dagger/hilt/android:activity_retained_lifecycle",

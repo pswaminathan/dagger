@@ -15,7 +15,7 @@
 # Description:
 #   The annotation for aggregating information about processed Hilt roots.
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_library(
     name = "processedrootsentinel",

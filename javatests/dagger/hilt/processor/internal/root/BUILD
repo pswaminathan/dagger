@@ -16,13 +16,13 @@
 
 load("//java/dagger/testing/compile:macros.bzl", "compiler_test")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 android_library(
     name = "MyAppPreviousCompilation",
     srcs = ["MyAppPreviousCompilation.java"],
     deps = [
-        "//:android_local_test_exports",
+        "@dagger//:android_local_test_exports",
         "//java/dagger/hilt/android:hilt_android_app",
     ],
 )
@@ -53,7 +53,7 @@ android_library(
     name = "MyTestPreviousCompilation",
     srcs = ["MyTestPreviousCompilation.java"],
     deps = [
-        "//:android_local_test_exports",
+        "@dagger//:android_local_test_exports",
         "//java/dagger/hilt/android/testing:hilt_android_test",
     ],
 )

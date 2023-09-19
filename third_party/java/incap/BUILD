@@ -16,7 +16,7 @@
 
 load("@rules_java//java:defs.bzl", "java_library", "java_plugin")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_library(
     name = "incap",

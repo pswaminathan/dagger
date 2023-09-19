@@ -18,7 +18,7 @@
 load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
 load(":maven_info.bzl", "maven_info_tests")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 maven_info_tests()
 

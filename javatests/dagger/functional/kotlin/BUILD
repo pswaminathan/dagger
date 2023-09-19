@@ -17,9 +17,9 @@
 
 load("@rules_java//java:defs.bzl", "java_library")
 load("@io_bazel_rules_kotlin//kotlin:kotlin.bzl", "kt_jvm_library")
-load("//:test_defs.bzl", "GenJavaTests")
+load("@dagger//:test_defs.bzl", "GenJavaTests")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 GenJavaTests(
     name = "PropertyQualifierTest",
@@ -45,7 +45,7 @@ kt_jvm_library(
     deps = [
         ":FooWithInjectedQualifier",
         ":java_qualifier",
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//javatests/dagger/functional/kotlin/processor:annotation",
     ],
 )
@@ -55,7 +55,7 @@ kt_jvm_library(
     srcs = ["FooWithInjectedQualifier.kt"],
     deps = [
         ":java_qualifier",
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
     ],
 )
 
@@ -66,7 +66,7 @@ java_library(
         "JavaTestQualifierWithTarget.java",
     ],
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
     ],
 )
 
@@ -94,7 +94,7 @@ kt_jvm_library(
     # TODO(danysantiago): Remove 'plugins' once kt_jvm_library supports 'exported_plugins'.
     plugins = ["//javatests/dagger/functional/kotlin/processor:plugin"],
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
     ],
 )
 
@@ -119,7 +119,7 @@ kt_jvm_library(
     # TODO(danysantiago): Remove 'plugins' once kt_jvm_library supports 'exported_plugins'.
     plugins = ["//javatests/dagger/functional/kotlin/processor:plugin"],
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//third_party/java/auto:factory",
     ],
 )
@@ -145,6 +145,6 @@ kt_jvm_library(
     # TODO(danysantiago): Remove 'plugins' once kt_jvm_library supports 'exported_plugins'.
     plugins = ["//javatests/dagger/functional/kotlin/processor:plugin"],
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
     ],
 )

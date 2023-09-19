@@ -15,10 +15,10 @@
 # Description:
 #   Functional tests for Dagger that depend on Guava
 
-load("//:build_defs.bzl", "DOCLINT_HTML_AND_SYNTAX")
-load("//:test_defs.bzl", "GenJavaTests")
+load("@dagger//:build_defs.bzl", "DOCLINT_HTML_AND_SYNTAX")
+load("@dagger//:test_defs.bzl", "GenJavaTests")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 GenJavaTests(
     name = "guava_tests",
@@ -26,7 +26,7 @@ GenJavaTests(
     javacopts = DOCLINT_HTML_AND_SYNTAX,
     require_jdk7_syntax = False,
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//third_party/java/auto:value",
         "//third_party/java/guava/base",
         "//third_party/java/guava/collect",

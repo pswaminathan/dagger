@@ -15,17 +15,17 @@
 # Description:
 #   Functional tests for Dagger
 
-load("//:build_defs.bzl", "DOCLINT_HTML_AND_SYNTAX")
-load("//:test_defs.bzl", "GenKtTests")
+load("@dagger//:build_defs.bzl", "DOCLINT_HTML_AND_SYNTAX")
+load("@dagger//:test_defs.bzl", "GenKtTests")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 GenKtTests(
     name = "AssistedFactoryAsQualifiedBindingTest",
     srcs = ["AssistedFactoryAsQualifiedBindingTest.kt"],
     javacopts = DOCLINT_HTML_AND_SYNTAX,
     test_only_deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//third_party/java/truth",
         "//third_party/java/junit",
     ],
@@ -36,7 +36,7 @@ GenKtTests(
     srcs = ["AssistedFactoryBindsTest.kt"],
     javacopts = DOCLINT_HTML_AND_SYNTAX,
     test_only_deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//third_party/java/truth",
         "//third_party/java/junit",
     ],
@@ -47,7 +47,7 @@ GenKtTests(
     srcs = ["AssistedFactoryDuplicatedParamNamesTest.kt"],
     javacopts = DOCLINT_HTML_AND_SYNTAX,
     test_only_deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//third_party/java/truth",
         "//third_party/java/junit",
     ],
@@ -61,7 +61,7 @@ GenKtTests(
     ],
     javacopts = DOCLINT_HTML_AND_SYNTAX,
     test_only_deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//third_party/java/truth",
         "//third_party/java/junit",
     ],
@@ -72,7 +72,7 @@ GenKtTests(
     srcs = ["AssistedFactoryParameterizedTest.kt"],
     javacopts = DOCLINT_HTML_AND_SYNTAX,
     test_only_deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//third_party/java/truth",
         "//third_party/java/junit",
     ],
@@ -83,7 +83,7 @@ GenKtTests(
     srcs = ["AssistedFactoryTest.kt"],
     javacopts = DOCLINT_HTML_AND_SYNTAX,
     test_only_deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//third_party/java/truth",
         "//third_party/java/junit",
     ],
@@ -94,7 +94,7 @@ GenKtTests(
     srcs = ["AssistedFactoryWithArrayTypesTest.kt"],
     javacopts = DOCLINT_HTML_AND_SYNTAX,
     test_only_deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//third_party/java/truth",
         "//third_party/java/junit",
     ],
@@ -105,7 +105,7 @@ GenKtTests(
     srcs = ["AssistedFactoryWithAssistedInjectParamTest.kt"],
     javacopts = DOCLINT_HTML_AND_SYNTAX,
     test_only_deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//third_party/java/truth",
         "//third_party/java/junit",
     ],
@@ -116,7 +116,7 @@ GenKtTests(
     srcs = ["AssistedFactoryWithMultibindingsTest.kt"],
     javacopts = DOCLINT_HTML_AND_SYNTAX,
     test_only_deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//third_party/java/truth",
         "//third_party/java/junit",
     ],
@@ -127,7 +127,7 @@ GenKtTests(
     srcs = ["AssistedFactoryWithQualifiedTypesTest.kt"],
     javacopts = DOCLINT_HTML_AND_SYNTAX,
     test_only_deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//third_party/java/truth",
         "//third_party/java/junit",
     ],
@@ -138,7 +138,7 @@ GenKtTests(
     srcs = ["AssistedFactoryWithJavaKeyWordNamesTest.kt"],
     javacopts = DOCLINT_HTML_AND_SYNTAX,
     test_only_deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//third_party/java/truth",
         "//third_party/java/junit",
     ],

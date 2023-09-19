@@ -15,16 +15,16 @@
 # Description:
 #   Functional tests for Dagger
 
-load("//:build_defs.bzl", "DOCLINT_HTML_AND_SYNTAX")
-load("//:test_defs.bzl", "GenKtLibrary")
+load("@dagger//:build_defs.bzl", "DOCLINT_HTML_AND_SYNTAX")
+load("@dagger//:test_defs.bzl", "GenKtLibrary")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 GenKtLibrary(
     name = "subpackage",
     srcs = glob(["*.kt"]),
     javacopts = DOCLINT_HTML_AND_SYNTAX,
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
     ],
 )

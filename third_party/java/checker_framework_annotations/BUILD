@@ -14,7 +14,7 @@
 
 # BUILD rules for https://checkerframework.org/
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 alias(
     name = "checker_framework_annotations",

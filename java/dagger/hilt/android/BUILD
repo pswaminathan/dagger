@@ -14,11 +14,11 @@
 
 # Description:
 #   A library based on Hilt that provides standard components and automated injection for Android.
-load("//:build_defs.bzl", "POM_VERSION")
+load("@dagger//:build_defs.bzl", "POM_VERSION")
 load("//tools:maven.bzl", "gen_maven_artifact")
 load("//tools:bazel_compat.bzl", "compat_kt_android_library")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["//visibility:public"])
 
 android_library(
     name = "android_entry_point",
@@ -68,7 +68,7 @@ android_library(
     ],
     exports = [
         ":activity_retained_lifecycle",
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//java/dagger/hilt:install_in",
         "//java/dagger/hilt/android/components",
         "//java/dagger/hilt/android/internal/builders",
@@ -136,7 +136,7 @@ android_library(
     ],
     deps = [
         ":package_info",
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//java/dagger/hilt:entry_point",
         "//java/dagger/hilt/android/internal",
         "//java/dagger/hilt/internal:component_manager",

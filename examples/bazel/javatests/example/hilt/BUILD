@@ -21,7 +21,7 @@ android_local_test(
         "minSdkVersion": "15",
     },
     deps = [
-        "//:hilt-android-testing",
+        "@dagger//:hilt-android-testing",
         "//java/example/common",
         "//java/example/hilt:heater_module",
         "@dagger_maven//:androidx_test_ext_junit",
@@ -42,7 +42,7 @@ android_local_test(
         "minSdkVersion": "15",
     },
     deps = [
-        "//:hilt-android-testing",
+        "@dagger//:hilt-android-testing",
         "//java/example/common",
         "//java/example/hilt:pump_module",
         "@dagger_maven//:androidx_test_ext_junit",

@@ -15,7 +15,7 @@
 # Description:
 #   A JSR-330 compliant dependency injection system for android and java
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_library(
     name = "componentgenerator",

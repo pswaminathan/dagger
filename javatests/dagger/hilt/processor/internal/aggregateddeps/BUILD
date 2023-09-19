@@ -17,7 +17,7 @@
 
 load("//java/dagger/testing/compile:macros.bzl", "compiler_test")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 compiler_test(
     name = "AggregatedDepsProcessorErrorsTest",
@@ -26,7 +26,7 @@ compiler_test(
     compiler_deps = [
         "//java/dagger/hilt/internal:component_entry_point",
         "//java/dagger/hilt/internal:generated_entry_point",
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//third_party/java/jsr250_annotations",
         "//java/dagger/hilt:entry_point",
         "//java/dagger/hilt:install_in",

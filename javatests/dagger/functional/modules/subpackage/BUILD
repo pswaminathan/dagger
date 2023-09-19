@@ -16,19 +16,19 @@
 #   Functional tests for Dagger modules usages.
 
 load(
-    "//:build_defs.bzl",
+    "@dagger//:build_defs.bzl",
     "DOCLINT_HTML_AND_SYNTAX",
     "DOCLINT_REFERENCES",
 )
-load("//:test_defs.bzl", "GenJavaLibrary")
+load("@dagger//:test_defs.bzl", "GenJavaLibrary")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 GenJavaLibrary(
     name = "subpackage",
     srcs = glob(["*.java"]),
     javacopts = DOCLINT_HTML_AND_SYNTAX + DOCLINT_REFERENCES,
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
     ],
 )

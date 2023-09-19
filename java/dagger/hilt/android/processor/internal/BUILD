@@ -15,7 +15,7 @@
 # Description:
 #   Internal code for implementing Hilt android processors.
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_library(
     name = "android_classnames",
