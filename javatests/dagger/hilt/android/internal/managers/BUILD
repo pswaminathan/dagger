@@ -32,6 +32,6 @@ android_local_test(
         "//java/dagger/hilt/android/lifecycle:hilt_view_model",
         "//java/dagger/hilt/android/testing:hilt_android_test",
         "//third_party/java/truth",
-        "@maven//:junit_junit",
+        "@dagger_maven//:junit_junit",
     ],
 )

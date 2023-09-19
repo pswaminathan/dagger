@@ -25,11 +25,11 @@ android_library(
         "//java/dagger/hilt:define_component",
         "//java/dagger/hilt/android:view_model_lifecycle",
         "//java/dagger/hilt/android/components",
-        "@maven//:androidx_activity_activity",
-        "@maven//:androidx_fragment_fragment",
-        "@maven//:androidx_lifecycle_lifecycle_common",
-        "@maven//:androidx_lifecycle_lifecycle_viewmodel",
-        "@maven//:androidx_lifecycle_lifecycle_viewmodel_savedstate",
+        "@dagger_maven//:androidx_activity_activity",
+        "@dagger_maven//:androidx_fragment_fragment",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_common",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_viewmodel",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_viewmodel_savedstate",
     ],
 )
 

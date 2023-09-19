@@ -19,5 +19,5 @@ package(default_visibility = ["//:src"])
 alias(
     name = "objenesis",
     testonly = 1,
-    actual = "@maven//:org_objenesis_objenesis",
+    actual = "@dagger_maven//:org_objenesis_objenesis",
 )

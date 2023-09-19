@@ -57,7 +57,7 @@ java_library(
         "//third_party/java/guava/collect",
         "//third_party/java/incap",
         "//third_party/java/javapoet",
-        "@maven//:com_google_devtools_ksp_symbol_processing_api",
+        "@dagger_maven//:com_google_devtools_ksp_symbol_processing_api",
     ],
 )
 
@@ -70,7 +70,7 @@ java_library(
         "//java/dagger/internal/codegen/xprocessing",
         "//third_party/java/auto:value",
         "//third_party/java/javapoet",
-        "@maven//:com_google_devtools_ksp_symbol_processing_api",
+        "@dagger_maven//:com_google_devtools_ksp_symbol_processing_api",
     ],
 )
 

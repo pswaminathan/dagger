@@ -18,5 +18,5 @@ package(default_visibility = ["//:src"])
 
 alias(
     name = "checker_framework_annotations",
-    actual = "@maven//:org_checkerframework_checker_compat_qual",
+    actual = "@dagger_maven//:org_checkerframework_checker_compat_qual",
 )

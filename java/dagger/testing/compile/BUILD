@@ -38,6 +38,6 @@ java_library(
         "//third_party/java/guava/collect",
         "//third_party/java/guava/io",
         "//third_party/java/junit",
-        "@maven//:com_google_devtools_ksp_symbol_processing_api",
+        "@dagger_maven//:com_google_devtools_ksp_symbol_processing_api",
     ],
 )

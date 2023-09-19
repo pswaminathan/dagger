@@ -27,11 +27,11 @@ kt_jvm_library(
     tags = ["maven_coordinates=com.google.dagger:dagger-lint:" + POM_VERSION],
     deps = [
         "//third_party/java/auto:service",
-        "@maven//:com_android_tools_external_com_intellij_intellij_core",
-        "@maven//:com_android_tools_external_com_intellij_kotlin_compiler",
-        "@maven//:com_android_tools_external_org_jetbrains_uast",
-        "@maven//:com_android_tools_lint_lint",
-        "@maven//:com_android_tools_lint_lint_api",
+        "@dagger_maven//:com_android_tools_external_com_intellij_intellij_core",
+        "@dagger_maven//:com_android_tools_external_com_intellij_kotlin_compiler",
+        "@dagger_maven//:com_android_tools_external_org_jetbrains_uast",
+        "@dagger_maven//:com_android_tools_lint_lint",
+        "@dagger_maven//:com_android_tools_lint_lint_api",
     ],
 )
 

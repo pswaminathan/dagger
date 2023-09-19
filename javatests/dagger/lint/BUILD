@@ -25,9 +25,9 @@ kt_jvm_test(
     deps = [
         "//java/dagger/lint:lint-artifact-lib",
         "//third_party/java/junit",
-        "@maven//:com_android_tools_lint_lint_checks",
-        "@maven//:com_android_tools_lint_lint_tests",
-        "@maven//:com_android_tools_testutils",
-        "@maven//:org_jetbrains_kotlin_kotlin_stdlib",
+        "@dagger_maven//:com_android_tools_lint_lint_checks",
+        "@dagger_maven//:com_android_tools_lint_lint_tests",
+        "@dagger_maven//:com_android_tools_testutils",
+        "@dagger_maven//:org_jetbrains_kotlin_kotlin_stdlib",
     ],
 )

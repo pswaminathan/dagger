@@ -19,5 +19,5 @@ package(default_visibility = ["//:src"])
 alias(
     name = "byte_buddy",
     testonly = 1,
-    actual = "@maven//:net_bytebuddy_byte_buddy",
+    actual = "@dagger_maven//:net_bytebuddy_byte_buddy",
 )

@@ -81,7 +81,7 @@ gen_maven_artifact(
     # util/deploy-dagger.sh
     shaded_deps = [
         "//third_party/java/auto:common",
-        "@maven//:org_jetbrains_kotlinx_kotlinx_metadata_jvm",
+        "@dagger_maven//:org_jetbrains_kotlinx_kotlinx_metadata_jvm",
         "//java/dagger/internal/codegen/xprocessing:xprocessing-jar",
     ],
 )

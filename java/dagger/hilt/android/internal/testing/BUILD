@@ -53,7 +53,7 @@ android_library(
         "//java/dagger/hilt/internal:component_manager",
         "//java/dagger/hilt/internal:preconditions",
         "//java/dagger/hilt/internal:test_singleton_component_manager",
-        "@maven//:junit_junit",
+        "@dagger_maven//:junit_junit",
     ],
 )
 
@@ -89,8 +89,8 @@ android_library(
         "//java/dagger/hilt/android/internal",
         "//java/dagger/hilt/internal:component_manager",
         "//java/dagger/hilt/internal:preconditions",
-        "@maven//:androidx_test_core",
-        "@maven//:junit_junit",
+        "@dagger_maven//:androidx_test_core",
+        "@dagger_maven//:junit_junit",
     ],
 )
 

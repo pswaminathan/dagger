@@ -50,7 +50,7 @@ android_library(
     srcs = ["RetainedLifecycle.java"],
     deps = [
         ":package_info",
-        "@maven//:androidx_annotation_annotation",
+        "@dagger_maven//:androidx_annotation_annotation",
     ],
 )
 

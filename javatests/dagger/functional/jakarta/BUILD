@@ -29,6 +29,6 @@ GenJavaTests(
         "//:dagger_with_compiler",
         "//third_party/java/junit",
         "//third_party/java/truth",
-        "@maven//:jakarta_inject_jakarta_inject_api",
+        "@dagger_maven//:jakarta_inject_jakarta_inject_api",
     ],
 )

@@ -28,7 +28,7 @@ compiler_test(
         "//java/dagger/hilt/android/testing:uninstall_modules",
         "//java/dagger/hilt/migration:disable_install_in_check",
         "@androidsdk//:platforms/android-32/android.jar",
-        "@maven//:androidx_annotation_annotation",
+        "@dagger_maven//:androidx_annotation_annotation",
     ],
     deps = [
         "//java/dagger/hilt/android/testing/compile",

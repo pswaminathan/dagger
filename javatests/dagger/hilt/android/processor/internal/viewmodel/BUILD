@@ -44,8 +44,8 @@ kt_compiler_test(
     ],
     compiler_deps = [
         "@androidsdk//:platforms/android-32/android.jar",
-        "@maven//:androidx_lifecycle_lifecycle_viewmodel",
-        "@maven//:androidx_lifecycle_lifecycle_viewmodel_savedstate",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_viewmodel",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_viewmodel_savedstate",
         "//third_party/java/compile_testing",
         "//third_party/java/truth",
         "//java/dagger/hilt/android/lifecycle:hilt_view_model",

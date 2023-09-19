@@ -53,7 +53,7 @@ java_library(
         "//third_party/java/google_java_format",
         "//third_party/java/guava/collect",
         "//third_party/java/incap",
-        "@maven//:com_google_devtools_ksp_symbol_processing_api",
+        "@dagger_maven//:com_google_devtools_ksp_symbol_processing_api",
     ],
 )
 

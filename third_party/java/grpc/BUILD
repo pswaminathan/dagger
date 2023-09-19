@@ -18,20 +18,20 @@ package(default_visibility = ["//:src"])
 
 alias(
     name = "core",
-    actual = "@maven//:io_grpc_grpc_core",
+    actual = "@dagger_maven//:io_grpc_grpc_core",
 )
 
 alias(
     name = "netty",
-    actual = "@maven//:io_grpc_grpc_netty",
+    actual = "@dagger_maven//:io_grpc_grpc_netty",
 )
 
 alias(
     name = "context",
-    actual = "@maven//:io_grpc_grpc_context",
+    actual = "@dagger_maven//:io_grpc_grpc_context",
 )
 
 alias(
     name = "protobuf",
-    actual = "@maven//:io_grpc_grpc_protobuf",
+    actual = "@dagger_maven//:io_grpc_grpc_protobuf",
 )

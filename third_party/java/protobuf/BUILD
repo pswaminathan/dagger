@@ -18,5 +18,5 @@ package(default_visibility = ["//:src"])
 
 alias(
     name = "protobuf",
-    actual = "@maven//:com_google_protobuf_protobuf_java",
+    actual = "@dagger_maven//:com_google_protobuf_protobuf_java",
 )

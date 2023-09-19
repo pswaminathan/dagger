@@ -23,19 +23,19 @@ package(default_visibility = ["//:src"])
 java_library(
     name = "annotations",
     tags = ["maven:compile_only"],
-    exports = ["@maven//:com_google_errorprone_error_prone_annotations"],
+    exports = ["@dagger_maven//:com_google_errorprone_error_prone_annotations"],
 )
 
 alias(
     name = "error_prone_javac",
-    actual = "@maven//:com_google_errorprone_javac_shaded",
+    actual = "@dagger_maven//:com_google_errorprone_javac_shaded",
 )
 
 java_library(
     name = "check_api",
     exports = [
-        "@maven//:com_google_errorprone_error_prone_annotation",
-        "@maven//:com_google_errorprone_error_prone_check_api",
+        "@dagger_maven//:com_google_errorprone_error_prone_annotation",
+        "@dagger_maven//:com_google_errorprone_error_prone_check_api",
     ],
     runtime_deps = [
         ":annotations",

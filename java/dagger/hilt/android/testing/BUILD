@@ -77,9 +77,9 @@ android_library(
         "//java/dagger/hilt/internal/componenttreedeps",
         "//java/dagger/hilt/internal/processedrootsentinel",
         "//java/dagger/hilt/migration:disable_install_in_check",
-        "@maven//:androidx_annotation_annotation",
-        "@maven//:androidx_multidex_multidex",
-        "@maven//:androidx_test_core",
+        "@dagger_maven//:androidx_annotation_annotation",
+        "@dagger_maven//:androidx_multidex_multidex",
+        "@dagger_maven//:androidx_test_core",
     ],
     deps = [
         "//java/dagger/hilt:generates_root_input",
@@ -94,7 +94,7 @@ android_library(
         ":package_info",
         "//java/dagger/hilt/android/internal/testing:mark_that_rules_ran_rule",
         "//java/dagger/hilt/internal:preconditions",
-        "@maven//:junit_junit",
+        "@dagger_maven//:junit_junit",
     ],
 )
 
@@ -110,7 +110,7 @@ android_library(
         "//java/dagger/hilt/android/internal/testing:test_application_component_manager",
         "//java/dagger/hilt/android/internal/testing:test_application_component_manager_holder",
         "//java/dagger/hilt/internal:component_manager",
-        "@maven//:androidx_multidex_multidex",
+        "@dagger_maven//:androidx_multidex_multidex",
     ],
 )
 

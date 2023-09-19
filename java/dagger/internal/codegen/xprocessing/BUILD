@@ -36,8 +36,8 @@ java_library(
         "//third_party/java/javapoet",
         "//third_party/java/jsr305_annotations",
         "//third_party/kotlin/kotlinpoet",
-        "@maven//:com_google_devtools_ksp_symbol_processing_api",
-        "@maven//:org_jetbrains_kotlin_kotlin_stdlib",
+        "@dagger_maven//:com_google_devtools_ksp_symbol_processing_api",
+        "@dagger_maven//:org_jetbrains_kotlin_kotlin_stdlib",
     ],
 )
 
@@ -52,7 +52,7 @@ java_import(
     jars = ["xprocessing.jar"],
     deps = [
         "//third_party/kotlin/kotlinpoet",
-        "@maven//:com_google_devtools_ksp_symbol_processing_api",
+        "@dagger_maven//:com_google_devtools_ksp_symbol_processing_api",
     ],
 )
 
@@ -61,10 +61,10 @@ java_library(
     testonly = 1,
     exports = [
         ":xprocessing-testing-lib",
-        "@maven//:com_google_devtools_ksp_symbol_processing",
-        "@maven//:org_jetbrains_kotlin_kotlin_annotation_processing_embeddable",
-        "@maven//:org_jetbrains_kotlin_kotlin_compiler_embeddable",
-        "@maven//:org_jetbrains_kotlin_kotlin_daemon_embeddable",
+        "@dagger_maven//:com_google_devtools_ksp_symbol_processing",
+        "@dagger_maven//:org_jetbrains_kotlin_kotlin_annotation_processing_embeddable",
+        "@dagger_maven//:org_jetbrains_kotlin_kotlin_compiler_embeddable",
+        "@dagger_maven//:org_jetbrains_kotlin_kotlin_daemon_embeddable",
     ],
 )
 

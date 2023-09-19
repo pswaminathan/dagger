@@ -18,5 +18,5 @@ package(default_visibility = ["//:src"])
 
 alias(
     name = "kotlinpoet",
-    actual = "@maven//:com_squareup_kotlinpoet",
+    actual = "@dagger_maven//:com_squareup_kotlinpoet",
 )
