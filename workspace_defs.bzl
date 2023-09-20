@@ -27,6 +27,8 @@ def dagger_workspace():
             "https://repo1.maven.org/maven2",
             "https://maven.google.com",
         ],
+        maven_install_json = "@dagger//:dagger_maven_install.json",
+        version_conflict_policy = "pinned",
     )
 
 ANDROID_LINT_VERSION = "30.1.0"
@@ -53,18 +55,22 @@ KOTLIN_VERSION = "1.9.0"
 KSP_VERSION = KOTLIN_VERSION + "-1.0.12"
 
 DAGGER_MAVEN_DEPS = [
-    "androidx.annotation:annotation:1.1.0",
-    "androidx.appcompat:appcompat:1.3.1",
-    "androidx.activity:activity:1.5.1",
-    "androidx.fragment:fragment:1.5.1",
-    "androidx.lifecycle:lifecycle-common:2.5.1",
-    "androidx.lifecycle:lifecycle-viewmodel:2.5.1",
-    "androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1",
+    "androidx.activity:activity-ktx:1.7.1",
+    "androidx.annotation:annotation:1.5.0",
+    "androidx.appcompat:appcompat:1.6.1",
+    "androidx.core:core-ktx:1.9.0",
+    "androidx.fragment:fragment-ktx:1.5.4",
+    "androidx.lifecycle:lifecycle-common:2.6.1",
+    "androidx.lifecycle:lifecycle-livedata-ktx:2.6.1",
+    "androidx.lifecycle:lifecycle-runtime:2.6.1",
+    "androidx.lifecycle:lifecycle-runtime-ktx:2.6.1",
+    "androidx.lifecycle:lifecycle-viewmodel:2.6.1",
+    "androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1",
     "androidx.multidex:multidex:2.0.1",
-    "androidx.navigation:navigation-common:2.5.1",
-    "androidx.navigation:navigation-fragment:2.5.1",
-    "androidx.navigation:navigation-runtime:2.5.1",
-    "androidx.savedstate:savedstate:1.2.0",
+    "androidx.navigation:navigation-common:2.5.3",
+    "androidx.navigation:navigation-fragment:2.5.3",
+    "androidx.navigation:navigation-runtime:2.5.3",
+    "androidx.savedstate:savedstate:1.2.1",
     "androidx.test:monitor:1.4.0",
     "androidx.test:core:1.4.0",
     "androidx.test.ext:junit:1.1.3",
@@ -140,10 +146,10 @@ DAGGER_MAVEN_DEPS = [
 _VERSION = POM_VERSION if POM_VERSION != "${project.version}" else "HEAD-SNAPSHOT"
 
 DAGGER_ARTIFACTS = [
-    "com.google.dagger:dagger:" + _VERSION,
-    "com.google.dagger:dagger-compiler:" + _VERSION,
-    "com.google.dagger:dagger-producers:" + _VERSION,
-    "com.google.dagger:dagger-spi:" + _VERSION,
+    #    "com.google.dagger:dagger:" + _VERSION,
+    #    "com.google.dagger:dagger-compiler:" + _VERSION,
+    #    "com.google.dagger:dagger-producers:" + _VERSION,
+    #    "com.google.dagger:dagger-spi:" + _VERSION,
 ]
 
 DAGGER_ANDROID_ARTIFACTS = [
@@ -153,15 +159,15 @@ DAGGER_ANDROID_ARTIFACTS = [
 ]
 
 HILT_ANDROID_ARTIFACTS = [
-    "androidx.test:core:1.1.0",  # Export for ApplicationProvider
-    "javax.annotation:javax.annotation-api:1.3.2",  # Export for @Generated
-    "androidx.annotation:annotation:1.1.0",  # Export for @CallSuper/@Nullable
-    "com.google.dagger:dagger:" + _VERSION,
-    "com.google.dagger:dagger-compiler:" + _VERSION,
-    "com.google.dagger:hilt-android:" + _VERSION,
-    "com.google.dagger:hilt-android-testing:" + _VERSION,
-    "com.google.dagger:hilt-android-compiler:" + _VERSION,
-    "com.google.dagger:hilt-core:" + _VERSION,
+    #    "androidx.test:core:1.1.0",  # Export for ApplicationProvider
+    #    "javax.annotation:javax.annotation-api:1.3.2",  # Export for @Generated
+    #    "androidx.annotation:annotation:1.1.0",  # Export for @CallSuper/@Nullable
+    #    "com.google.dagger:dagger:" + _VERSION,
+    #    "com.google.dagger:dagger-compiler:" + _VERSION,
+    #    "com.google.dagger:hilt-android:" + _VERSION,
+    #    "com.google.dagger:hilt-android-testing:" + _VERSION,
+    #    "com.google.dagger:hilt-android-compiler:" + _VERSION,
+    #    "com.google.dagger:hilt-core:" + _VERSION,
 ]
 
 DAGGER_REPOSITORIES = [
