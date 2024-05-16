@@ -14,9 +14,9 @@
 
 # BUILD rules for https://github.com/square/javapoet
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 alias(
     name = "jspecify_annotations",
-    actual = "@maven//:org_jspecify_jspecify",
+    actual = "@dagger_maven//:org_jspecify_jspecify",
 )

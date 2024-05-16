@@ -14,19 +14,19 @@
 
 # BUILD rules for http://asm.ow2.org/
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 alias(
     name = "asm",
-    actual = "@maven//:org_ow2_asm_asm",
+    actual = "@dagger_maven//:org_ow2_asm_asm",
 )
 
 alias(
     name = "asm-tree",
-    actual = "@maven//:org_ow2_asm_asm_tree",
+    actual = "@dagger_maven//:org_ow2_asm_asm_tree",
 )
 
 alias(
     name = "asm-commons",
-    actual = "@maven//:org_ow2_asm_asm_commons",
+    actual = "@dagger_maven//:org_ow2_asm_asm_commons",
 )

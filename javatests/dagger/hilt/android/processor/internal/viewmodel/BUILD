@@ -18,7 +18,7 @@
 load("@io_bazel_rules_kotlin//kotlin:kotlin.bzl", "kt_jvm_library")
 load("//java/dagger/testing/compile:macros.bzl", "kt_compiler_test")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 kt_compiler_test(
     name = "ViewModelProcessorTest",
@@ -44,8 +44,8 @@ kt_compiler_test(
     ],
     compiler_deps = [
         "@androidsdk//:platforms/android-32/android.jar",
-        "@maven//:androidx_lifecycle_lifecycle_viewmodel",
-        "@maven//:androidx_lifecycle_lifecycle_viewmodel_savedstate",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_viewmodel",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_viewmodel_savedstate",
         "//third_party/java/compile_testing",
         "//third_party/java/truth",
         "//java/dagger/hilt/android/lifecycle:hilt_view_model",
@@ -55,7 +55,7 @@ kt_compiler_test(
     resources = glob(["goldens/*"]),
     deps = [
         ":test_utils",
-        "//:compiler_internals",
+        "@dagger//:compiler_internals",
         "//java/dagger/hilt/android/processor/internal/viewmodel:processor_lib",
         "//java/dagger/hilt/android/processor/internal/viewmodel:validation_plugin_lib",
         "//java/dagger/hilt/android/testing/compile",

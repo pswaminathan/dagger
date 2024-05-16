@@ -19,6 +19,7 @@ release.properties
 build.log
 
 .idea
+.ijwb
 *.iml
 classes
 

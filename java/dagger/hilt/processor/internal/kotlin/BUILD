@@ -17,13 +17,13 @@
 
 load("@rules_java//java:defs.bzl", "java_library")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_library(
     name = "kotlin",
     srcs = glob(["*.java"]),
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//java/dagger/hilt/processor/internal:classnames",
         "//java/dagger/internal/codegen/extension",
         "//java/dagger/internal/codegen/xprocessing",
@@ -33,7 +33,7 @@ java_library(
         "//third_party/java/javapoet",
         "//third_party/java/jsr305_annotations",
         "//third_party/java/jsr330_inject",
-        "@maven//:org_jetbrains_kotlin_kotlin_stdlib",
-        "@maven//:org_jetbrains_kotlinx_kotlinx_metadata_jvm",
+        "@dagger_maven//:org_jetbrains_kotlin_kotlin_stdlib",
+        "@dagger_maven//:org_jetbrains_kotlinx_kotlinx_metadata_jvm",
     ],
 )

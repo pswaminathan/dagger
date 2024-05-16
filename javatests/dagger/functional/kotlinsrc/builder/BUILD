@@ -15,10 +15,10 @@
 # Description:
 #   Functional tests for Dagger builders
 
-load("//:build_defs.bzl", "DOCLINT_HTML_AND_SYNTAX")
-load("//:test_defs.bzl", "GenKtTests")
+load("@dagger//:build_defs.bzl", "DOCLINT_HTML_AND_SYNTAX")
+load("@dagger//:test_defs.bzl", "GenKtTests")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 GenKtTests(
     name = "BuilderBindsInstanceParameterTest",
@@ -30,7 +30,7 @@ GenKtTests(
         "//third_party/java/guava:testlib",
         "//third_party/java/truth",
         "//third_party/java/junit",
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
     ],
     deps = [],
 )
@@ -45,7 +45,7 @@ GenKtTests(
         "//third_party/java/guava:testlib",
         "//third_party/java/truth",
         "//third_party/java/junit",
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
     ],
     deps = [],
 )
@@ -60,7 +60,7 @@ GenKtTests(
         "//third_party/java/guava:testlib",
         "//third_party/java/truth",
         "//third_party/java/junit",
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
     ],
     deps = [],
 )
@@ -75,7 +75,7 @@ GenKtTests(
         "//third_party/java/guava:testlib",
         "//third_party/java/truth",
         "//third_party/java/junit",
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
     ],
     deps = [],
 )
@@ -90,7 +90,7 @@ GenKtTests(
         "//third_party/java/guava:testlib",
         "//third_party/java/truth",
         "//third_party/java/junit",
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
     ],
     deps = [],
 )

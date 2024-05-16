@@ -16,13 +16,13 @@
 
 load("@rules_java//java:defs.bzl", "java_library")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_library(
     name = "dataflow",
-    exports = ["@maven//:org_checkerframework_dataflow"],
+    exports = ["@dagger_maven//:org_checkerframework_dataflow"],
     runtime_deps = [
-        "@maven//:org_checkerframework_checker_qual",
-        "@maven//:org_checkerframework_javacutil",
+        "@dagger_maven//:org_checkerframework_checker_qual",
+        "@dagger_maven//:org_checkerframework_javacutil",
     ],
 )

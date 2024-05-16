@@ -15,7 +15,7 @@
 # Description:
 #   Hilt Android qualifiers
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 android_library(
     name = "qualifiers",

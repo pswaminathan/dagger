@@ -17,14 +17,14 @@
 
 load("@rules_java//java:defs.bzl", "java_library")
 load(
-    "//:build_defs.bzl",
+    "@dagger//:build_defs.bzl",
     "DOCLINT_HTML_AND_SYNTAX",
     "DOCLINT_REFERENCES",
     "POM_VERSION",
 )
 load("//tools:maven.bzl", "gen_maven_artifact")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 filegroup(
     name = "spi-srcs",
@@ -81,7 +81,7 @@ gen_maven_artifact(
     # util/deploy-dagger.sh
     shaded_deps = [
         "//third_party/java/auto:common",
-        "@maven//:org_jetbrains_kotlinx_kotlinx_metadata_jvm",
+        "@dagger_maven//:org_jetbrains_kotlinx_kotlinx_metadata_jvm",
         "//java/dagger/internal/codegen/xprocessing:xprocessing-jar",
     ],
 )

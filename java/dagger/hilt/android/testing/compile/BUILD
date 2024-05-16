@@ -14,7 +14,7 @@
 # Description:
 #   Tests for internal code for implementing Hilt processors.
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_library(
     name = "compile",
@@ -47,6 +47,6 @@ java_library(
         "//third_party/java/guava/base",
         "//third_party/java/guava/collect",
         "//third_party/java/junit",
-        "@maven//:com_google_devtools_ksp_symbol_processing_api",
+        "@dagger_maven//:com_google_devtools_ksp_symbol_processing_api",
     ],
 )

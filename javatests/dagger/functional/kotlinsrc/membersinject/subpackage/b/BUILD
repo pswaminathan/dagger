@@ -16,13 +16,13 @@
 #   Functional tests for Dagger members inject usages.
 
 load(
-    "//:build_defs.bzl",
+    "@dagger//:build_defs.bzl",
     "DOCLINT_HTML_AND_SYNTAX",
     "DOCLINT_REFERENCES",
 )
-load("//:test_defs.bzl", "GenKtLibrary")
+load("@dagger//:test_defs.bzl", "GenKtLibrary")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 GenKtLibrary(
     name = "child",
@@ -35,6 +35,6 @@ GenKtLibrary(
     ],
     javacopts = DOCLINT_HTML_AND_SYNTAX + DOCLINT_REFERENCES,
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
     ],
 )

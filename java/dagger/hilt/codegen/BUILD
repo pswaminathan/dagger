@@ -15,7 +15,7 @@
 # Description:
 #   This package contains sources used within code generated sources.
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_library(
     name = "originating_element",

@@ -14,10 +14,10 @@
 
 # BUILD rules for https://github.com/hamcrest/JavaHamcrest
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 alias(
     name = "hamcrest",
     testonly = 1,
-    actual = "@maven//:org_hamcrest_hamcrest_core",
+    actual = "@dagger_maven//:org_hamcrest_hamcrest_core",
 )

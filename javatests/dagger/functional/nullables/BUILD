@@ -16,20 +16,20 @@
 #   Functional tests for Dagger nullable usages.
 
 load(
-    "//:build_defs.bzl",
+    "@dagger//:build_defs.bzl",
     "DOCLINT_HTML_AND_SYNTAX",
     "DOCLINT_REFERENCES",
 )
-load("//:test_defs.bzl", "GenJavaTests")
+load("@dagger//:test_defs.bzl", "GenJavaTests")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 GenJavaTests(
     name = "JspecifyNullableTest",
     srcs = ["JspecifyNullableTest.java"],
     javacopts = DOCLINT_HTML_AND_SYNTAX + DOCLINT_REFERENCES,
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//third_party/java/jspecify_annotations",
         "//third_party/java/junit",
         "//third_party/java/truth",
@@ -41,7 +41,7 @@ GenJavaTests(
     srcs = ["NullabilityTest.java"],
     javacopts = DOCLINT_HTML_AND_SYNTAX + DOCLINT_REFERENCES,
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//third_party/java/junit",
         "//third_party/java/truth",
     ],

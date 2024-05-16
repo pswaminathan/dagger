@@ -16,13 +16,13 @@
 
 load("//java/dagger/testing/compile:macros.bzl", "compiler_test")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 android_library(
     name = "MyAppPreviousCompilation",
     srcs = ["MyAppPreviousCompilation.java"],
     deps = [
-        "//:android_local_test_exports",
+        "@dagger//:android_local_test_exports",
         "//java/dagger/hilt/android:hilt_android_app",
     ],
 )
@@ -35,10 +35,10 @@ compiler_test(
         "//java/dagger/hilt/android:hilt_android_app",
         "//java/dagger/hilt/android/testing:hilt_android_test",
         "@androidsdk//:platforms/android-32/android.jar",
-        "@maven//:androidx_annotation_annotation",
-        "@maven//:org_robolectric_robolectric",
-        "@maven//:androidx_test_ext_junit",
-        "@maven//:androidx_test_core",
+        "@dagger_maven//:androidx_annotation_annotation",
+        "@dagger_maven//:org_robolectric_robolectric",
+        "@dagger_maven//:androidx_test_ext_junit",
+        "@dagger_maven//:androidx_test_core",
     ],
     deps = [
         "//java/dagger/hilt/android/testing/compile",
@@ -53,7 +53,7 @@ android_library(
     name = "MyTestPreviousCompilation",
     srcs = ["MyTestPreviousCompilation.java"],
     deps = [
-        "//:android_local_test_exports",
+        "@dagger//:android_local_test_exports",
         "//java/dagger/hilt/android/testing:hilt_android_test",
     ],
 )
@@ -66,10 +66,10 @@ compiler_test(
         "//java/dagger/hilt/android:hilt_android_app",
         "//java/dagger/hilt/android/testing:hilt_android_test",
         "@androidsdk//:platforms/android-32/android.jar",
-        "@maven//:androidx_annotation_annotation",
-        "@maven//:org_robolectric_robolectric",
-        "@maven//:androidx_test_ext_junit",
-        "@maven//:androidx_test_core",
+        "@dagger_maven//:androidx_annotation_annotation",
+        "@dagger_maven//:org_robolectric_robolectric",
+        "@dagger_maven//:androidx_test_ext_junit",
+        "@dagger_maven//:androidx_test_core",
     ],
     deps = [
         "//java/dagger/hilt/android/testing/compile",
@@ -87,10 +87,10 @@ compiler_test(
         "//java/dagger/hilt/android:hilt_android_app",
         "//java/dagger/hilt/android/testing:hilt_android_test",
         "@androidsdk//:platforms/android-32/android.jar",
-        "@maven//:androidx_annotation_annotation",
-        "@maven//:org_robolectric_robolectric",
-        "@maven//:androidx_test_ext_junit",
-        "@maven//:androidx_test_core",
+        "@dagger_maven//:androidx_annotation_annotation",
+        "@dagger_maven//:org_robolectric_robolectric",
+        "@dagger_maven//:androidx_test_ext_junit",
+        "@dagger_maven//:androidx_test_core",
     ],
     deps = [
         "//java/dagger/hilt/android/testing/compile",
@@ -107,10 +107,10 @@ compiler_test(
         "//java/dagger/hilt/android:hilt_android_app",
         "//java/dagger/hilt/android/testing:hilt_android_test",
         "@androidsdk//:platforms/android-32/android.jar",
-        "@maven//:androidx_annotation_annotation",
-        "@maven//:org_robolectric_robolectric",
-        "@maven//:androidx_test_ext_junit",
-        "@maven//:androidx_test_core",
+        "@dagger_maven//:androidx_annotation_annotation",
+        "@dagger_maven//:org_robolectric_robolectric",
+        "@dagger_maven//:androidx_test_ext_junit",
+        "@dagger_maven//:androidx_test_core",
     ],
     deps = [
         "//java/dagger/hilt/android/testing/compile",

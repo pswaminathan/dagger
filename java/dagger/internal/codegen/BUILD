@@ -17,12 +17,12 @@
 
 load("@rules_java//java:defs.bzl", "java_library", "java_plugin")
 load(
-    "//:build_defs.bzl",
+    "@dagger//:build_defs.bzl",
     "POM_VERSION",
 )
 load("//tools:maven.bzl", "gen_maven_artifact")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_library(
     name = "processor",
@@ -53,7 +53,7 @@ java_library(
         "//third_party/java/google_java_format",
         "//third_party/java/guava/collect",
         "//third_party/java/incap",
-        "@maven//:com_google_devtools_ksp_symbol_processing_api",
+        "@dagger_maven//:com_google_devtools_ksp_symbol_processing_api",
     ],
 )
 

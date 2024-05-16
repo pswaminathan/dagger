@@ -14,10 +14,10 @@
 
 # BUILD rules for https://github.com/mockito/mockito
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 alias(
     name = "byte_buddy",
     testonly = 1,
-    actual = "@maven//:net_bytebuddy_byte_buddy",
+    actual = "@dagger_maven//:net_bytebuddy_byte_buddy",
 )

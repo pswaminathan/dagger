@@ -15,7 +15,7 @@
 # Description:
 #   Helpers for migrating to Hilt.
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 android_library(
     name = "optional_inject",
@@ -30,12 +30,12 @@ android_library(
         ":package_info",
         "//java/dagger/hilt/android/internal/migration:injected_by_hilt",
         "//java/dagger/hilt/internal:preconditions",
-        "@maven//:androidx_activity_activity",
-        "@maven//:androidx_annotation_annotation",
-        "@maven//:androidx_fragment_fragment",
-        "@maven//:androidx_lifecycle_lifecycle_common",
-        "@maven//:androidx_lifecycle_lifecycle_viewmodel",
-        "@maven//:androidx_lifecycle_lifecycle_viewmodel_savedstate",
+        "@dagger_maven//:androidx_activity_activity",
+        "@dagger_maven//:androidx_annotation_annotation",
+        "@dagger_maven//:androidx_fragment_fragment",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_common",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_viewmodel",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_viewmodel_savedstate",
     ],
 )
 
@@ -52,7 +52,7 @@ android_library(
         ":package_info",
         "//java/dagger/hilt/android/internal/migration:has_custom_inject",
         "//java/dagger/hilt/internal:preconditions",
-        "@maven//:androidx_annotation_annotation",
+        "@dagger_maven//:androidx_annotation_annotation",
     ],
 )
 

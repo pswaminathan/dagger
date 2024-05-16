@@ -16,20 +16,20 @@
 #   Functional tests for Dagger Producer multibinding usages.
 
 load(
-    "//:build_defs.bzl",
+    "@dagger//:build_defs.bzl",
     "DOCLINT_HTML_AND_SYNTAX",
     "DOCLINT_REFERENCES",
 )
-load("//:test_defs.bzl", "GenJavaTests")
+load("@dagger//:test_defs.bzl", "GenJavaTests")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 GenJavaTests(
     name = "multibindings",
     srcs = glob(["*.java"]),
     javacopts = DOCLINT_HTML_AND_SYNTAX + DOCLINT_REFERENCES,
     deps = [
-        "//:producers_with_compiler",
+        "@dagger//:producers_with_compiler",
         "//third_party/java/auto:factory",
         "//third_party/java/guava/base",
         "//third_party/java/guava/collect",

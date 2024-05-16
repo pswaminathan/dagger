@@ -17,7 +17,7 @@
 
 load("@rules_java//java:defs.bzl", "java_library")
 load(
-    "//:build_defs.bzl",
+    "@dagger//:build_defs.bzl",
     "DOCLINT_HTML_AND_SYNTAX",
     "JAVA_RELEASE_MIN",
     "POM_VERSION",
@@ -25,7 +25,7 @@ load(
 load("//tools:maven.bzl", "pom_file")
 load("@google_bazel_common//tools/javadoc:javadoc.bzl", "javadoc_library")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_library(
     name = "core",

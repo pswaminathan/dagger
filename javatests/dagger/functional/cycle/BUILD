@@ -15,10 +15,10 @@
 # Description:
 #   Functional tests for Dagger cycles
 
-load("//:build_defs.bzl", "DOCLINT_HTML_AND_SYNTAX")
-load("//:test_defs.bzl", "GenJavaTests")
+load("@dagger//:build_defs.bzl", "DOCLINT_HTML_AND_SYNTAX")
+load("@dagger//:test_defs.bzl", "GenJavaTests")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 GenJavaTests(
     name = "CycleTest",
@@ -34,7 +34,7 @@ GenJavaTests(
         "//third_party/java/junit",
     ],
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//third_party/java/guava/collect",
     ],
 )
@@ -50,7 +50,7 @@ GenJavaTests(
         "//third_party/java/guava/util/concurrent",
         "//third_party/java/truth",
         "//third_party/java/junit",
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
     ],
 )
 
@@ -70,6 +70,6 @@ GenJavaTests(
         "//third_party/java/junit",
     ],
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
     ],
 )

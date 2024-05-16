@@ -16,9 +16,9 @@
 #   Functional tests for the experimental Dagger SPI
 
 load("@rules_java//java:defs.bzl", "java_library", "java_plugin")
-load("//:test_defs.bzl", "GenJavaTests")
+load("@dagger//:test_defs.bzl", "GenJavaTests")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_plugin(
     name = "test_plugin",
@@ -50,7 +50,7 @@ GenJavaTests(
     ],
     deps = [
         ":test_lib",
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//third_party/java/guava",
     ],
 )

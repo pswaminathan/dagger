@@ -15,13 +15,13 @@
 # Description:
 #   Functional tests for Dagger
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_library(
     name = "subpackage",
     srcs = glob(["*.java"]),
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//third_party/java/jsr330_inject",
     ],
 )

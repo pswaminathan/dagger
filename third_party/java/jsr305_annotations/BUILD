@@ -14,9 +14,9 @@
 
 # BUILD rules for https://jcp.org/en/jsr/detail?id=305
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 alias(
     name = "jsr305_annotations",
-    actual = "@maven//:com_google_code_findbugs_jsr305",
+    actual = "@dagger_maven//:com_google_code_findbugs_jsr305",
 )

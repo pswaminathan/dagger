@@ -1,13 +1,13 @@
 load("@rules_java//java:defs.bzl", "java_library", "java_plugin")
 load(
-    "//:build_defs.bzl",
+    "@dagger//:build_defs.bzl",
     "DOCLINT_HTML_AND_SYNTAX",
     "POM_VERSION",
 )
 load("//tools:maven.bzl", "pom_file")
 load("@google_bazel_common//tools/javadoc:javadoc.bzl", "javadoc_library")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_library(
     name = "processor",
@@ -15,7 +15,7 @@ java_library(
     javacopts = DOCLINT_HTML_AND_SYNTAX,
     tags = ["maven_coordinates=com.google.dagger:dagger-grpc-server-processor:" + POM_VERSION],
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//java/dagger/grpc/server:annotations",
         "//third_party/java/auto:common",
         "//third_party/java/auto:service",

@@ -14,9 +14,9 @@
 
 # BUILD rules for https://github.com/google/protobuf/tree/master/java
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 alias(
     name = "protobuf",
-    actual = "@maven//:com_google_protobuf_protobuf_java",
+    actual = "@dagger_maven//:com_google_protobuf_protobuf_java",
 )

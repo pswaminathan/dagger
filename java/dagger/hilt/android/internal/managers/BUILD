@@ -15,7 +15,7 @@
 # Description:
 #   Internal Hilt Android managers
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 android_library(
     name = "component_supplier",
@@ -35,7 +35,7 @@ android_library(
     ],
     deps = [
         ":component_supplier",
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//java/dagger/hilt:entry_point",
         "//java/dagger/hilt:install_in",
         "//java/dagger/hilt/android:activity_retained_lifecycle",
@@ -47,12 +47,12 @@ android_library(
         "//java/dagger/hilt/android/scopes",
         "//java/dagger/hilt/internal:component_manager",
         "//java/dagger/hilt/internal:preconditions",
-        "@maven//:androidx_activity_activity",
-        "@maven//:androidx_annotation_annotation",
-        "@maven//:androidx_fragment_fragment",
-        "@maven//:androidx_lifecycle_lifecycle_common",
-        "@maven//:androidx_lifecycle_lifecycle_viewmodel",
-        "@maven//:androidx_lifecycle_lifecycle_viewmodel_savedstate",
+        "@dagger_maven//:androidx_activity_activity",
+        "@dagger_maven//:androidx_annotation_annotation",
+        "@dagger_maven//:androidx_fragment_fragment",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_common",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_viewmodel",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_viewmodel_savedstate",
     ],
 )
 

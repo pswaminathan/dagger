@@ -14,9 +14,9 @@
 
 # BUILD rules for https://github.com/square/javapoet
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 alias(
     name = "javapoet",
-    actual = "@maven//:com_squareup_javapoet",
+    actual = "@dagger_maven//:com_squareup_javapoet",
 )

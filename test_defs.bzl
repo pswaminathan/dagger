@@ -15,7 +15,7 @@
 """This file defines constants useful across the Dagger tests."""
 
 load("@rules_java//java:defs.bzl", "java_library", "java_test")
-load("//:build_defs.bzl", "JAVA_RELEASE_MIN")
+load("@dagger//:build_defs.bzl", "JAVA_RELEASE_MIN")
 load(
     "@io_bazel_rules_kotlin//kotlin:kotlin.bzl",
     "kt_jvm_library",
@@ -141,7 +141,7 @@ def GenRobolectricTests(
         functional = True,
         require_jdk7_syntax = True,
         manifest_values = None):
-    deps = (deps or []) + ["//:android_local_test_exports"]
+    deps = (deps or []) + ["@dagger//:android_local_test_exports"]
     _GenTestsWithVariants(
         library_rule_type = native.android_library,
         test_rule_type = native.android_local_test,

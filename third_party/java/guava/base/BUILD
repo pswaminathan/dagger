@@ -14,7 +14,7 @@
 
 # BUILD rules for https://github.com/google/guava
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 alias(
     name = "base",

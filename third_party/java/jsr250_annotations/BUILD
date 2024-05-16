@@ -14,9 +14,9 @@
 
 # BUILD rules for https://en.wikipedia.org/wiki/JSR_250
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 alias(
     name = "jsr250_annotations",
-    actual = "@maven//:javax_annotation_javax_annotation_api",
+    actual = "@dagger_maven//:javax_annotation_javax_annotation_api",
 )

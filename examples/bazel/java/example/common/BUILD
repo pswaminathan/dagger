@@ -20,6 +20,6 @@ java_library(
         "//javatests/example:__subpackages__",
     ],
     deps = [
-        "//:dagger",
+        "@dagger//:dagger",
     ],
 )

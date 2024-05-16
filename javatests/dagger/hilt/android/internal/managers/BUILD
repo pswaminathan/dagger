@@ -14,7 +14,7 @@
 # Description:
 #   Tests for internal code for implementing Hilt processors.
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 android_local_test(
     name = "FragmentContextWrapperLeakTest",
@@ -25,13 +25,13 @@ android_local_test(
         "minSdkVersion": "14",
     },
     deps = [
-        "//:android_local_test_exports",
-        "//:dagger_with_compiler",
+        "@dagger//:android_local_test_exports",
+        "@dagger//:dagger_with_compiler",
         "//java/dagger/hilt:install_in",
         "//java/dagger/hilt/android:android_entry_point",
         "//java/dagger/hilt/android/lifecycle:hilt_view_model",
         "//java/dagger/hilt/android/testing:hilt_android_test",
         "//third_party/java/truth",
-        "@maven//:junit_junit",
+        "@dagger_maven//:junit_junit",
     ],
 )

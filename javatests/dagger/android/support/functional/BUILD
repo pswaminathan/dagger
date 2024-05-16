@@ -15,9 +15,9 @@
 # Description:
 #   Functional test code for Dagger-Android
 
-load("//:test_defs.bzl", "GenRobolectricTests")
+load("@dagger//:test_defs.bzl", "GenRobolectricTests")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 android_library(
     name = "functional",
@@ -29,16 +29,16 @@ android_library(
     manifest = "AndroidManifest.xml",
     resource_files = glob(["res/**"]),
     deps = [
-        "@maven//:androidx_activity_activity",
-        "@maven//:androidx_fragment_fragment",
-        "@maven//:androidx_lifecycle_lifecycle_common",
-        "@maven//:androidx_lifecycle_lifecycle_viewmodel",
-        "@maven//:androidx_lifecycle_lifecycle_viewmodel_savedstate",
-        "@maven//:androidx_appcompat_appcompat",
-        "@maven//:androidx_annotation_annotation",
-        "//:dagger_with_compiler",
-        "//:android",
-        "//:android-support",
+        "@dagger_maven//:androidx_activity_activity",
+        "@dagger_maven//:androidx_fragment_fragment",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_common",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_viewmodel",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_viewmodel_savedstate",
+        "@dagger_maven//:androidx_appcompat_appcompat",
+        "@dagger_maven//:androidx_annotation_annotation",
+        "@dagger//:dagger_with_compiler",
+        "@dagger//:android",
+        "@dagger//:android-support",
         # TODO(ronshapiro): figure out why strict deps is failing without this
         "//third_party/java/jsr250_annotations",
     ],
@@ -52,18 +52,18 @@ GenRobolectricTests(
     },
     deps = [
         ":functional",
-        "//:android",
-        "//:android-support",
-        "//:dagger_with_compiler",
+        "@dagger//:android",
+        "@dagger//:android-support",
+        "@dagger//:dagger_with_compiler",
         "//third_party/java/truth",
-        "@maven//:androidx_activity_activity",
-        "@maven//:androidx_fragment_fragment",
-        "@maven//:androidx_lifecycle_lifecycle_common",
-        "@maven//:androidx_lifecycle_lifecycle_viewmodel",
-        "@maven//:androidx_lifecycle_lifecycle_viewmodel_savedstate",
-        "@maven//:androidx_test_core",
-        "@maven//:androidx_test_ext_junit",
-        "@maven//:junit_junit",
-        "@maven//:org_robolectric_robolectric",
+        "@dagger_maven//:androidx_activity_activity",
+        "@dagger_maven//:androidx_fragment_fragment",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_common",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_viewmodel",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_viewmodel_savedstate",
+        "@dagger_maven//:androidx_test_core",
+        "@dagger_maven//:androidx_test_ext_junit",
+        "@dagger_maven//:junit_junit",
+        "@dagger_maven//:org_robolectric_robolectric",
     ],
 )

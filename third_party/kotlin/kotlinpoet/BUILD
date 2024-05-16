@@ -14,9 +14,9 @@
 
 # BUILD rules for https://github.com/square/kotlinpoet
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 alias(
     name = "kotlinpoet",
-    actual = "@maven//:com_squareup_kotlinpoet",
+    actual = "@dagger_maven//:com_squareup_kotlinpoet",
 )

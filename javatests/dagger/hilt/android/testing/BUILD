@@ -14,7 +14,7 @@
 # Description:
 #   Tests for internal code for implementing Hilt processors.
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 android_local_test(
     name = "BindValueTest",
@@ -24,7 +24,7 @@ android_local_test(
         "targetSdkVersion": "27",
     },
     deps = [
-        "//:android_local_test_exports",
+        "@dagger//:android_local_test_exports",
         "//java/dagger/hilt:entry_point",
         "//java/dagger/hilt/android:android_entry_point",
         "//java/dagger/hilt/android/testing:bind_value",
@@ -43,8 +43,8 @@ android_local_test(
         "targetSdkVersion": "27",
     },
     deps = [
-        "//:android_local_test_exports",
-        "//:dagger_with_compiler",
+        "@dagger//:android_local_test_exports",
+        "@dagger//:dagger_with_compiler",
         "//java/dagger/hilt:entry_point",
         "//java/dagger/hilt/android:android_entry_point",
         "//java/dagger/hilt/android/testing:bind_value",
@@ -64,8 +64,8 @@ android_local_test(
         "targetSdkVersion": "27",
     },
     deps = [
-        "//:android_local_test_exports",
-        "//:dagger_with_compiler",
+        "@dagger//:android_local_test_exports",
+        "@dagger//:dagger_with_compiler",
         "//java/dagger/hilt:entry_point",
         "//java/dagger/hilt/android:android_entry_point",
         "//java/dagger/hilt/android/testing:bind_value",
@@ -84,8 +84,8 @@ android_local_test(
         "targetSdkVersion": "27",
     },
     deps = [
-        "//:android_local_test_exports",
-        "//:dagger_with_compiler",
+        "@dagger//:android_local_test_exports",
+        "@dagger//:dagger_with_compiler",
         "//java/dagger/hilt:entry_point",
         "//java/dagger/hilt/android:android_entry_point",
         "//java/dagger/hilt/android/testing:bind_value",
@@ -105,8 +105,8 @@ android_local_test(
         "targetSdkVersion": "27",
     },
     deps = [
-        "//:android_local_test_exports",
-        "//:dagger_with_compiler",
+        "@dagger//:android_local_test_exports",
+        "@dagger//:dagger_with_compiler",
         "//java/dagger/hilt:install_in",
         "//java/dagger/hilt/android:android_entry_point",
         "//java/dagger/hilt/android/testing:hilt_android_test",
@@ -124,8 +124,8 @@ android_local_test(
     },
     deps = [
         ":HiltAndroidRuleTestApp",
-        "//:android_local_test_exports",
-        "//:dagger_with_compiler",
+        "@dagger//:android_local_test_exports",
+        "@dagger//:dagger_with_compiler",
         "//java/dagger/hilt/android/testing:hilt_android_rule",
         "//java/dagger/hilt/android/testing:hilt_android_test",
         "//third_party/java/guava/collect",
@@ -137,7 +137,7 @@ android_library(
     name = "HiltAndroidRuleTestApp",
     srcs = ["HiltAndroidRuleTestApp.java"],
     deps = [
-        "//:android_local_test_exports",
+        "@dagger//:android_local_test_exports",
         "//java/dagger/hilt/android:hilt_android_app",
     ],
 )
@@ -150,7 +150,7 @@ android_local_test(
         "targetSdkVersion": "27",
     },
     deps = [
-        "//:android_local_test_exports",
+        "@dagger//:android_local_test_exports",
         "//java/dagger/hilt:entry_point",
         "//java/dagger/hilt/android:android_entry_point",
         "//java/dagger/hilt/android/testing:bind_value",

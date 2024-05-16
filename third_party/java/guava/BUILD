@@ -16,26 +16,26 @@
 
 load("@rules_java//java:defs.bzl", "java_library", "java_plugin")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_library(
     name = "guava",
-    exported_plugins = [":beta-checker"],
+    #    exported_plugins = [":beta-checker"],
     exports = [
-        "@maven//:com_google_guava_failureaccess",
-        "@maven//:com_google_guava_guava",
+        "@dagger_maven//:com_google_guava_failureaccess",
+        "@dagger_maven//:com_google_guava_guava",
     ],
 )
 
 java_library(
     name = "testlib",
     testonly = 1,
-    exports = ["@maven//:com_google_guava_guava_testlib"],
+    exports = ["@dagger_maven//:com_google_guava_guava_testlib"],
     runtime_deps = [":guava"],
 )
 
 java_plugin(
     name = "beta-checker",
     visibility = ["//visibility:private"],
-    deps = ["@maven//:com_google_guava_guava_beta_checker"],
+    deps = ["@dagger_maven//:com_google_guava_guava_beta_checker"],
 )

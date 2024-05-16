@@ -15,7 +15,7 @@
 # Description:
 #   Hilt ViewModel integration.
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_library(
     name = "package_info",
@@ -33,7 +33,7 @@ android_library(
     ],
     proguard_specs = ["proguard-rules.pro"],
     exports = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//java/dagger/hilt:install_in",
         "//java/dagger/hilt/android/components",
         "//java/dagger/hilt/android/internal/lifecycle",
@@ -50,7 +50,7 @@ android_library(
     srcs = ["RetainedLifecycle.java"],
     deps = [
         ":package_info",
-        "@maven//:androidx_annotation_annotation",
+        "@dagger_maven//:androidx_annotation_annotation",
     ],
 )
 

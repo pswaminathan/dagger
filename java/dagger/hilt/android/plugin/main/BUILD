@@ -15,7 +15,7 @@
 # Description:
 #   A Gradle plugin that performs a transform.
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 genrule(
     name = "import-shared-lib",

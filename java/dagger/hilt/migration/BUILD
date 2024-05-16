@@ -14,7 +14,7 @@
 # Description:
 #   Libraries for migration.
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_library(
     name = "alias_of",

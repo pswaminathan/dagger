@@ -21,7 +21,7 @@
 #     deps = [
 #         ":heater_module",
 #         ":pump_module",
-#         "//:hilt-android",
+#         "@dagger//:hilt-android",
 #         "//java/example/common",
 #     ],
 # )
@@ -32,7 +32,7 @@ android_library(
     manifest = "AndroidManifest.xml",
     visibility = ["//javatests/example/hilt:__pkg__"],
     deps = [
-        "//:hilt-android",
+        "@dagger//:hilt-android",
         "//java/example/common",
     ],
 )
@@ -43,7 +43,7 @@ android_library(
     manifest = "AndroidManifest.xml",
     visibility = ["//javatests/example/hilt:__pkg__"],
     deps = [
-        "//:hilt-android",
+        "@dagger//:hilt-android",
         "//java/example/common",
     ],
 )

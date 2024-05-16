@@ -16,12 +16,12 @@
 
 load("@rules_java//java:defs.bzl", "java_library")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_library(
     name = "mockito",
     testonly = 1,
-    exports = ["@maven//:org_mockito_mockito_core"],
+    exports = ["@dagger_maven//:org_mockito_mockito_core"],
     runtime_deps = [
         "//third_party/java/byte_buddy",
         "//third_party/java/byte_buddy_agent",

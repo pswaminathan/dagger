@@ -15,10 +15,10 @@
 # Description:
 #   Tests for Dagger's Android integrations
 
-load("//:build_defs.bzl", "DOCLINT_HTML_AND_SYNTAX")
-load("//:test_defs.bzl", "GenJavaTests")
+load("@dagger//:build_defs.bzl", "DOCLINT_HTML_AND_SYNTAX")
+load("@dagger//:test_defs.bzl", "GenJavaTests")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 GenJavaTests(
     name = "android_processor_tests",
@@ -26,7 +26,7 @@ GenJavaTests(
     functional = False,
     javacopts = DOCLINT_HTML_AND_SYNTAX,
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//java/dagger/android",
         "//java/dagger/android/processor",
         "//java/dagger/internal/codegen:processor",
@@ -36,10 +36,10 @@ GenJavaTests(
         "//third_party/java/junit",
         "//third_party/java/truth",
         "@androidsdk//:platforms/android-32/android.jar",
-        "@maven//:androidx_activity_activity",
-        "@maven//:androidx_fragment_fragment",
-        "@maven//:androidx_lifecycle_lifecycle_common",
-        "@maven//:androidx_lifecycle_lifecycle_viewmodel",
-        "@maven//:androidx_lifecycle_lifecycle_viewmodel_savedstate",
+        "@dagger_maven//:androidx_activity_activity",
+        "@dagger_maven//:androidx_fragment_fragment",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_common",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_viewmodel",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_viewmodel_savedstate",
     ],
 )

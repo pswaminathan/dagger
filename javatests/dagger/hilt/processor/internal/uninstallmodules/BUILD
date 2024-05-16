@@ -17,7 +17,7 @@
 
 load("//java/dagger/testing/compile:macros.bzl", "compiler_test")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 compiler_test(
     name = "UninstallModulesProcessorTest",
@@ -28,7 +28,7 @@ compiler_test(
         "//java/dagger/hilt/android/testing:uninstall_modules",
         "//java/dagger/hilt/migration:disable_install_in_check",
         "@androidsdk//:platforms/android-32/android.jar",
-        "@maven//:androidx_annotation_annotation",
+        "@dagger_maven//:androidx_annotation_annotation",
     ],
     deps = [
         "//java/dagger/hilt/android/testing/compile",

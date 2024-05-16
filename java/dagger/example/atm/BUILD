@@ -18,12 +18,12 @@
 
 load("@rules_java//java:defs.bzl", "java_binary", "java_library")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_library(
     name = "atm",
     srcs = glob(["*.java"]),
-    deps = ["//:dagger_with_compiler"],
+    deps = ["@dagger//:dagger_with_compiler"],
 )
 
 java_binary(

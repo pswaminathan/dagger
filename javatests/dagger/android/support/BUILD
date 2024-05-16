@@ -15,10 +15,10 @@
 # Description:
 #   Tests for Dagger's Android and Support library integrations
 
-load("//:build_defs.bzl", "DOCLINT_HTML_AND_SYNTAX")
-load("//:test_defs.bzl", "GenRobolectricTests")
+load("@dagger//:build_defs.bzl", "DOCLINT_HTML_AND_SYNTAX")
+load("@dagger//:test_defs.bzl", "GenRobolectricTests")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 GenRobolectricTests(
     name = "android-support-tests",
@@ -29,7 +29,7 @@ GenRobolectricTests(
         "minSdkVersion": "14",
     },
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//java/dagger/android",
         "//java/dagger/android/support",
         "//third_party/java/guava/base",
@@ -37,11 +37,11 @@ GenRobolectricTests(
         "//third_party/java/guava/util/concurrent",
         "//third_party/java/junit",
         "//third_party/java/truth",
-        "@maven//:androidx_activity_activity",
-        "@maven//:androidx_appcompat_appcompat",
-        "@maven//:androidx_fragment_fragment",
-        "@maven//:androidx_lifecycle_lifecycle_common",
-        "@maven//:androidx_lifecycle_lifecycle_viewmodel",
-        "@maven//:androidx_lifecycle_lifecycle_viewmodel_savedstate",
+        "@dagger_maven//:androidx_activity_activity",
+        "@dagger_maven//:androidx_appcompat_appcompat",
+        "@dagger_maven//:androidx_fragment_fragment",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_common",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_viewmodel",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_viewmodel_savedstate",
     ],
 )

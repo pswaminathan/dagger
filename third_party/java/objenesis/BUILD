@@ -14,10 +14,10 @@
 
 # BUILD rules for https://github.com/mockito/mockito
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 alias(
     name = "objenesis",
     testonly = 1,
-    actual = "@maven//:org_objenesis_objenesis",
+    actual = "@dagger_maven//:org_objenesis_objenesis",
 )

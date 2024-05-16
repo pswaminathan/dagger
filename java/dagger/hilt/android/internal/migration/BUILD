@@ -15,7 +15,7 @@
 # Description:
 #   Internal classes for migration
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 android_library(
     name = "has_custom_inject",

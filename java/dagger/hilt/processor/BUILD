@@ -15,10 +15,10 @@
 # Description:
 #   Hilt android processors.
 
-load("//:build_defs.bzl", "POM_VERSION")
+load("@dagger//:build_defs.bzl", "POM_VERSION")
 load("//tools:maven.bzl", "gen_maven_artifact")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 # TODO(bcorso): merge this into :artifact-lib once we remove hilt-android-compiler artifact.
 java_library(

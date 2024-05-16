@@ -16,7 +16,7 @@
 
 load("//java/dagger/testing/compile:macros.bzl", "compiler_test")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 compiler_test(
     name = "GeneratorsTest",
@@ -25,7 +25,7 @@ compiler_test(
         "//java/dagger/hilt/android:hilt_android_app",
         "//java/dagger/hilt/android:android_entry_point",
         "@androidsdk//:platforms/android-32/android.jar",
-        "@maven//:androidx_annotation_annotation",
+        "@dagger_maven//:androidx_annotation_annotation",
     ],
     deps = [
         "//java/dagger/hilt/android/testing/compile",

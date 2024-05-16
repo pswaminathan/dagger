@@ -12,10 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-load("//:build_defs.bzl", "DOCLINT_HTML_AND_SYNTAX")
-load("//:test_defs.bzl", "GenJavaTests")
+load("@dagger//:build_defs.bzl", "DOCLINT_HTML_AND_SYNTAX")
+load("@dagger//:test_defs.bzl", "GenJavaTests")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 # TODO(b/203233586): Replace with GenJavaTest
 GenJavaTests(
@@ -33,7 +33,7 @@ GenJavaTests(
         "//third_party/java/truth",
     ],
     deps = [
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//javatests/dagger/functional/jdk8:optional_binding_components",
         "//third_party/java/auto:value",
         "//third_party/java/jsr305_annotations",

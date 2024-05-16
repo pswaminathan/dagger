@@ -15,23 +15,24 @@
 # Description:
 #   Hilt android modules for standard components.
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 android_library(
     name = "modules",
     srcs = glob(["*.java"]),
     deps = [
-        "//:dagger_with_compiler",
         "//java/dagger/hilt:install_in",
         "//java/dagger/hilt/android/components",
         "//java/dagger/hilt/android/internal",
         "//java/dagger/hilt/android/qualifiers",
-        "@maven//:androidx_activity_activity",
-        "@maven//:androidx_annotation_annotation",
-        "@maven//:androidx_fragment_fragment",
-        "@maven//:androidx_lifecycle_lifecycle_common",
-        "@maven//:androidx_lifecycle_lifecycle_viewmodel",
-        "@maven//:androidx_lifecycle_lifecycle_viewmodel_savedstate",
+        "@dagger//:dagger_with_compiler",
+        "@dagger_maven//:androidx_activity_activity",
+        "@dagger_maven//:androidx_annotation_annotation",
+        "@dagger_maven//:androidx_core_core",
+        "@dagger_maven//:androidx_fragment_fragment",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_common",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_viewmodel",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_viewmodel_savedstate",
     ],
 )
 

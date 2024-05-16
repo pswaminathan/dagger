@@ -15,7 +15,7 @@
 # Description:
 #   A processor that aggregates metadata about Hilt @EarlyEntryPoint annotations
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 java_library(
     name = "earlyentrypoint",

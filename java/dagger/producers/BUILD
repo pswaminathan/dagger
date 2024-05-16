@@ -17,7 +17,7 @@
 
 load("@rules_java//java:defs.bzl", "java_library")
 load(
-    "//:build_defs.bzl",
+    "@dagger//:build_defs.bzl",
     "DOCLINT_HTML_AND_SYNTAX",
     "DOCLINT_REFERENCES",
     "JAVA_RELEASE_MIN",
@@ -25,7 +25,7 @@ load(
 )
 load("//tools:maven.bzl", "gen_maven_artifact")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 # Work around b/70476182 which prevents Kythe from connecting :producers to the .java files it
 # contains.

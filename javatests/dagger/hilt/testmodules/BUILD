@@ -15,7 +15,7 @@
 # Description:
 #  Builds and run tests related to AggregatedDepsProcessor.
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 # The test modules are left out because they don't build due to
 # https://github.com/bazelbuild/bazel/issues/16087

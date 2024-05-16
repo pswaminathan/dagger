@@ -16,13 +16,13 @@
 #   Functional tests for Dagger raw types
 
 load(
-    "//:build_defs.bzl",
+    "@dagger//:build_defs.bzl",
     "DOCLINT_HTML_AND_SYNTAX",
     "DOCLINT_REFERENCES",
 )
-load("//:test_defs.bzl", "GenJavaTests")
+load("@dagger//:test_defs.bzl", "GenJavaTests")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 GenJavaTests(
     name = "RawTypesComponentTest",
@@ -32,6 +32,6 @@ GenJavaTests(
         "//third_party/java/guava/collect",
         "//third_party/java/truth",
         "//third_party/java/junit",
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
     ],
 )

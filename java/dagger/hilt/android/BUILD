@@ -14,11 +14,11 @@
 
 # Description:
 #   A library based on Hilt that provides standard components and automated injection for Android.
-load("//:build_defs.bzl", "POM_VERSION")
+load("@dagger//:build_defs.bzl", "POM_VERSION")
 load("//tools:maven.bzl", "gen_maven_artifact")
 load("//tools:bazel_compat.bzl", "compat_kt_android_library")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["//visibility:public"])
 
 android_library(
     name = "android_entry_point",
@@ -44,12 +44,12 @@ android_library(
         "//java/dagger/hilt/internal:component_manager",
         "//java/dagger/hilt/internal:generated_entry_point",
         "//java/dagger/hilt/internal:preconditions",
-        "@maven//:androidx_activity_activity",
-        "@maven//:androidx_annotation_annotation",
-        "@maven//:androidx_fragment_fragment",
-        "@maven//:androidx_lifecycle_lifecycle_common",
-        "@maven//:androidx_lifecycle_lifecycle_viewmodel",
-        "@maven//:androidx_lifecycle_lifecycle_viewmodel_savedstate",
+        "@dagger_maven//:androidx_activity_activity",
+        "@dagger_maven//:androidx_annotation_annotation",
+        "@dagger_maven//:androidx_fragment_fragment",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_common",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_viewmodel",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_viewmodel_savedstate",
     ],
     deps = [
         ":package_info",
@@ -68,7 +68,7 @@ android_library(
     ],
     exports = [
         ":activity_retained_lifecycle",
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//java/dagger/hilt:install_in",
         "//java/dagger/hilt/android/components",
         "//java/dagger/hilt/android/internal/builders",
@@ -85,12 +85,12 @@ android_library(
         "//java/dagger/hilt/internal/componenttreedeps",
         "//java/dagger/hilt/internal/processedrootsentinel",
         "//java/dagger/hilt/migration:disable_install_in_check",
-        "@maven//:androidx_activity_activity",
-        "@maven//:androidx_annotation_annotation",
-        "@maven//:androidx_fragment_fragment",
-        "@maven//:androidx_lifecycle_lifecycle_common",
-        "@maven//:androidx_lifecycle_lifecycle_viewmodel",
-        "@maven//:androidx_lifecycle_lifecycle_viewmodel_savedstate",
+        "@dagger_maven//:androidx_activity_activity",
+        "@dagger_maven//:androidx_annotation_annotation",
+        "@dagger_maven//:androidx_fragment_fragment",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_common",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_viewmodel",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_viewmodel_savedstate",
     ],
     deps = [
         ":package_info",
@@ -136,7 +136,7 @@ android_library(
     ],
     deps = [
         ":package_info",
-        "//:dagger_with_compiler",
+        "@dagger//:dagger_with_compiler",
         "//java/dagger/hilt:entry_point",
         "//java/dagger/hilt/android/internal",
         "//java/dagger/hilt/internal:component_manager",
@@ -258,11 +258,11 @@ compat_kt_android_library(
     deps = [
         "//java/dagger/hilt:entry_point",
         "//java/dagger/hilt/android/internal",
-        "@maven//:androidx_activity_activity",
-        "@maven//:androidx_fragment_fragment",
-        "@maven//:androidx_lifecycle_lifecycle_common",
-        "@maven//:androidx_lifecycle_lifecycle_viewmodel",
-        "@maven//:androidx_lifecycle_lifecycle_viewmodel_savedstate",
+        "@dagger_maven//:androidx_activity_activity",
+        "@dagger_maven//:androidx_fragment_fragment",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_common",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_viewmodel",
+        "@dagger_maven//:androidx_lifecycle_lifecycle_viewmodel_savedstate",
     ],
 )
 

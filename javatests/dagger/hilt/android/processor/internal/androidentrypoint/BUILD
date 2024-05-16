@@ -16,7 +16,7 @@
 
 load("//java/dagger/testing/compile:macros.bzl", "compiler_test", "kt_compiler_test")
 
-package(default_visibility = ["//:src"])
+package(default_visibility = ["@dagger//:src"])
 
 compiler_test(
     name = "ActivityGeneratorTest",
